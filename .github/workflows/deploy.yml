@@ -44,7 +44,13 @@ jobs:
         # built from it -- left at the production domain, a staging deploy would
         # bounce visitors straight to the old live site.
         run: |
-          printf 'url: "%s"\n' "${{ steps.pages.outputs.origin }}" > _config.pages.yml
+          # Force https. configure-pages reports the origin as http:// until
+          # "Enforce HTTPS" is ticked, and that can only happen after the
+          # certificate issues -- so a deploy made in that window would bake
+          # http:// into every canonical tag and all 136 redirect stubs.
+          origin="${{ steps.pages.outputs.origin }}"
+          printf 'url: "%s"\n' "${origin/#http:\/\//https://}" > _config.pages.yml
+          cat _config.pages.yml
           bundle exec jekyll build \
             --config _config.yml,_config.pages.yml \
             --baseurl "${{ steps.pages.outputs.base_path }}" \
