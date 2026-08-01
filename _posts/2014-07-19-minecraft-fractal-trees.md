@@ -18,7 +18,7 @@ These are the 3d fractal tree's I created in Minecraft:
 
 This is what a 2d fractal tree looks like:
 
-![](http://rosettacode.org/mw/images/a/a3/Fractal_tree_bbc.gif)
+[Fractal tree — Rosetta Code](https://rosettacode.org/wiki/Fractal_tree)
 
 I found some python turtle code to create the 2d tree at [interactivepython.org/runestone/static/pythonds/Recursion/graphical.html](http://interactivepython.org/runestone/static/pythonds/Recursion/graphical.html):
 

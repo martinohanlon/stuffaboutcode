@@ -8,10 +8,6 @@ redirect_from:
 
 Anyway, I was growing a Mo for [Movember](http://uk.movember.com/), its a great charity which encourages Men to grow a Mo (moustache) during the month of November, the aim of which is to raise vital funds and awareness for men’s health, specifically prostate cancer and testicular cancer.
 
-**My Mo's**
-
-![](http://static.movember.com/uploads/2011/profiles/110/714/11071424db02a0397a6d37bd24b4fa24-50a795d03a0ed-hero.jpg)![](http://static.movember.com/uploads/2011/profiles/874/0c8/8740c8575fb641c9fe2f7f16aba43035-50b348209c834-hero.jpg)![](http://static.movember.com/uploads/2011/albums/640/464/6404647b55502fd6ae351d093fa337b9-50ba02d5bf3ff-hero.jpg)
-
 I decided to see if I could get some extra donations through my blog, not ever so hopeful, but I thought it was worth a go, so I created a HTML gadget on my blog, which would show a picture of me and my Mo and provide a link to donate to Movember, on the top right.
 
 Firstly a BIG thank you to those people who did donate, I really wasn't expecting any and those that did donate where fantastically generous.
