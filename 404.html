@@ -1,0 +1,35 @@
+---
+layout: default
+title: 'Page not found'
+permalink: /404.html
+sitemap: false
+---
+{%- comment -%}
+GitHub Pages serves this for any unmatched path, at any depth, so every asset
+and link here has to be site-absolute. relative_url gives that.
+
+Reuses the list header and empty-state styles rather than inventing a 404 look.
+{%- endcomment -%}
+
+<div class="list-head">
+  <h1 class="list-kicker">404</h1>
+  <span class="list-rule" aria-hidden="true"></span>
+  <span class="list-count">not found</span>
+</div>
+<p class="list-sub">that page has moved, or never existed</p>
+
+<div class="empty-state">
+  <p>
+    Most of the old <b>stuffaboutcode.com</b> addresses still work — they redirect here
+    automatically. If you followed a link and landed on this page, the post may have been
+    renamed.
+  </p>
+  <p>
+    Try the search box, or browse <a href="{{ '/' | relative_url }}">all {{ site.posts | size }} posts</a>.
+  </p>
+  <div class="chips chips--centred">
+    {%- for t in site.data.tags limit: 6 %}
+    <a class="chip" href="{{ '/tags/' | append: t.slug | append: '/' | relative_url }}">#{{ t.slug }}</a>
+    {%- endfor %}
+  </div>
+</div>
