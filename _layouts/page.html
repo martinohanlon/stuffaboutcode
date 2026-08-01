@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="page-article">
+  <a class="back-link" href="{{ '/' | relative_url }}">← all posts</a>
+
+  <h1 class="page-title">{{ page.title | escape }}</h1>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {%- comment -%}
+  _pages/*.md is regenerated from the Blogger export, so the About page's link
+  cards come from _data rather than its front matter.
+  {%- endcomment -%}
+  {%- if page.url == '/about/' -%}{%- assign links = site.data.about_links -%}
+  {%- else -%}{%- assign links = page.links -%}{%- endif -%}
+  {%- if links %}
+  <div class="link-cards">
+    {%- for l in links %}
+    <a href="{{ l.url | relative_url }}">{{ l.name }} ↗</a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</article>

@@ -1,0 +1,82 @@
+title: '<Stuff about="code" />'
+description: >-
+  Python, Raspberry Pi and Minecraft how-tos by Martin O'Hanlon.
+author: Martin O'Hanlon
+url: https://www.stuffaboutcode.com
+baseurl: ""
+
+timezone: Europe/London
+
+permalink: /posts/:slug/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope: { path: "", type: "posts" }
+    values:
+      layout: post
+  # NB "pages" matches BOTH the collection above and Jekyll's built-in type for
+  # any standalone file carrying front matter -- including assets. The assets
+  # rule below is what stops that wrapping the stylesheet in a layout.
+  - scope: { path: "", type: "pages" }
+    values:
+      layout: page
+  - scope: { path: "assets" }
+    values:
+      layout: null
+      sitemap: false
+
+# jekyll-paginate-v2 — 7 per page
+pagination:
+  enabled: true
+  per_page: 7
+  permalink: "/page/:num/"
+  title: ":title"
+  sort_field: "date"
+  sort_reverse: true
+
+# One paginated page per label at /tags/:tag/, from the same plugin.
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    enabled: true
+    layouts: ["tag.html"]
+    title: ":tag"
+    permalink: "/tags/:tag/"
+    slugify:
+      # tags are already slugs (raspberry-pi, csharp); do not re-slugify
+      mode: "raw"
+      cased: true
+
+feed:
+  path: feed.xml
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - archive
+  - _import
+  - CLAUDE.md
+  - README.md

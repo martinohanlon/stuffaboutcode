@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{%- assign page_title = page.title | default: site.title -%}
+{%- if page.title -%}
+  <title>{{ page.title | strip_html }} · stuffaboutcode.com</title>
+{%- else -%}
+  <title>{{ site.title | strip_html }} — Python, Raspberry Pi, Minecraft</title>
+{%- endif -%}
+
+{%- if page.excerpt -%}
+  {%- assign desc = page.excerpt | strip_html | normalize_whitespace | truncate: 180 -%}
+{%- else -%}
+  {%- assign desc = site.description -%}
+{%- endif -%}
+<meta name="description" content="{{ desc | strip_newlines }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:site_name" content="stuffaboutcode.com">
+<meta property="og:title" content="{{ page_title | strip_html }}">
+<meta property="og:description" content="{{ desc | strip_newlines }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+{%- comment -%}
+Set the theme before first paint, or a light-theme visitor gets a dark flash.
+Has to be inline and blocking; everything else is deferred.
+{%- endcomment -%}
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (t !== "light" && t !== "dark") {
+      t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+    document.documentElement.dataset.theme = t;
+  } catch (e) { /* private mode: keep the dark default */ }
+})();
+</script>
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+<link rel="alternate" type="application/atom+xml" title="{{ site.title | strip_html }}" href="{{ '/feed.xml' | relative_url }}">
+<link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" sizes="any">

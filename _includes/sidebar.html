@@ -1,0 +1,34 @@
+<aside class="sidebar">
+
+  <div class="search-block">
+    <label class="visually-hidden" for="site-search">Search posts</label>
+    <div class="search-box">
+      <span class="slash" aria-hidden="true">/</span>
+      <input id="site-search" type="search" autocomplete="off" spellcheck="false"
+             data-search-input
+             data-search-url="{{ '/search.json' | relative_url }}"
+             data-tag-base="{{ '/tags/' | relative_url }}"
+             placeholder="search {{ site.posts | size }} posts">
+    </div>
+  </div>
+
+  <div>
+    <h2>Labels</h2>
+    <div class="label-cloud">
+      {%- for t in site.data.tags %}
+      <a href="{{ '/tags/' | append: t.slug | append: '/' | relative_url }}">{{ t.name }} <span class="count">{{ t.count }}</span></a>
+      {%- endfor %}
+    </div>
+  </div>
+
+  <div>
+    <h2>Pages</h2>
+    <div class="page-links">
+      <a href="{{ '/raspberry-pi/' | relative_url }}">Raspberry Pi</a>
+      <a href="{{ '/minecraft/' | relative_url }}">Minecraft</a>
+      <a href="{{ '/adventures-in-minecraft/' | relative_url }}">Adventures in Minecraft</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+    </div>
+  </div>
+
+</aside>

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{%- comment -%}
+The most important screen: nearly all traffic lands here.
+{%- endcomment -%}
+
+<article class="post">
+  <a class="back-link" href="{{ '/' | relative_url }}">← all posts</a>
+
+  <h1 class="post-title">{{ page.title | escape }}</h1>
+
+  <div class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+    <span aria-hidden="true">·</span>
+    <span>{{ site.author }}</span>
+    <span aria-hidden="true">·</span>
+    {%- assign words = page.content | number_of_words -%}
+    {%- assign mins = words | divided_by: 200 | plus: 1 -%}
+    <span>{{ mins }} min read</span>
+    {%- if page.tags and page.tags != empty %}
+    <span class="chips">
+      {%- for tag in page.tags %}
+      <a class="chip" href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">#{{ tag }}</a>
+      {%- endfor %}
+    </span>
+    {%- endif %}
+  </div>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {%- if page.previous or page.next %}
+  <nav class="post-nav" aria-label="Adjacent posts">
+    {%- if page.previous %}
+    <a class="prev" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>
+    {%- endif %}
+    {%- if page.next %}
+    <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>
+    {%- endif %}
+  </nav>
+  {%- endif %}
+</article>

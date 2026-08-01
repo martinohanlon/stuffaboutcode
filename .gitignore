@@ -1,0 +1,25 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+Gemfile.lock
+vendor/
+
+# Import working area. blog.xml is the source of truth and IS committed;
+# everything else here is scratch.
+_import/Takeout/
+_import/jitest/
+_import/report/
+
+# Per-machine Claude Code permissions. .claude/settings.json is shared.
+.claude/settings.local.json
+
+# Python bytecode from the import scripts
+__pycache__/
+*.pyc
+
+# Design handoff bundle — kept locally as reference, not versioned
+design_handoff_stuffaboutcode_jekyll/
+
+# Blogger Takeout export — kept locally, too large to version
+archive/

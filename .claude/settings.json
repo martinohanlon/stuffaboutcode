@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm vitest run *)",
+      "PowerShell(pnpm vitest run *)",
+      "Bash(pnpm turbo run typecheck *)",
+      "PowerShell(pnpm turbo run typecheck *)",
+      "Bash(pnpm typecheck *)",
+      "PowerShell(pnpm typecheck *)",
+      "Bash(pnpm test *)",
+      "PowerShell(Set-Location *)",
+      "PowerShell(Test-Path *)"
+    ]
+  }
+}

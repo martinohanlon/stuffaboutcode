@@ -1,0 +1,43 @@
+{%- comment -%}
+The list screen, shared by the home page and the generated tag pages. A tag view
+is this same list with a different kicker and subtitle, not a separate design.
+
+  include.posts     posts to show on this page
+  include.total     total across all pages (for the count)
+  include.kicker    lowercase kicker: "latest", a tag name, "search results"
+  include.subtitle  line under the kicker
+{%- endcomment -%}
+
+<div data-list-view>
+  <div class="list-head">
+    <h1 class="list-kicker" data-list-kicker>{{ include.kicker }}</h1>
+    <span class="list-rule" aria-hidden="true"></span>
+    <span class="list-count" data-list-count>{{ include.total }} post{% if include.total != 1 %}s{% endif %}</span>
+  </div>
+  <p class="list-sub" data-list-sub>{{ include.subtitle }}</p>
+
+  <div data-list-results>
+    {%- if include.total > 0 %}
+    {% include post-list.html posts=include.posts %}
+    {%- else %}
+    <div class="empty-state">
+      no posts here yet. try <a href="{{ '/tags/minecraft/' | relative_url }}">minecraft</a>,
+      <a href="{{ '/tags/gpio/' | relative_url }}">gpio</a> or
+      <a href="{{ '/tags/python/' | relative_url }}">python</a>
+    </div>
+    {%- endif %}
+  </div>
+
+  {%- if paginator and paginator.total_pages > 1 %}
+  <div class="pagination">
+    <span class="prompt" aria-hidden="true">$</span>
+    {%- if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">load older posts</a>
+    {%- endif %}
+    <span>— {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {%- if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">newer</a>
+    {%- endif %}
+  </div>
+  {%- endif %}
+</div>

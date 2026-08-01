@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{%- if paginator -%}
+  {%- assign posts = paginator.posts -%}
+  {%- assign total = paginator.total_posts -%}
+{%- else -%}
+  {%- assign posts = page.posts | default: site.posts -%}
+  {%- assign total = posts | size -%}
+{%- endif -%}
+
+{%- include list-screen.html
+      posts=posts
+      total=total
+      kicker=page.kicker
+      subtitle=page.subtitle -%}

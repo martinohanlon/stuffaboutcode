@@ -1,0 +1,9 @@
+# Link cards on the About page. Kept in _data because _pages/about.md is
+# regenerated from the Blogger export by _import/convert.py, so hand-added front
+# matter there would be overwritten.
+- name: github
+  url: https://github.com/martinohanlon
+- name: youtube
+  url: https://www.youtube.com/user/martinohanlon
+- name: rss
+  url: /feed.xml

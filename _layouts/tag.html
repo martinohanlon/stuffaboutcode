@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{%- comment -%}
+Generated once per label by jekyll-paginate-v2's autopages, at /tags/:tag/.
+Not a separate design: the home list with the kicker set to the tag name.
+{%- endcomment -%}
+
+{%- comment -%}
+autopages stashes the tag on the pagination config it builds (see
+baseAutoPage.rb: `config['tag'] = tag` merged into data['pagination']), so it
+reads back as page.pagination.tag -- not page.autopages.tag.
+{%- endcomment -%}
+{%- assign slug = page.pagination.tag | default: page.title -%}
+{%- assign meta = site.data.tags | where: "slug", slug | first -%}
+{%- assign display = meta.name | default: slug -%}
+{%- assign sub = display | prepend: "everything filed under " -%}
+
+{%- include list-screen.html
+      posts=paginator.posts
+      total=paginator.total_posts
+      kicker=display
+      subtitle=sub -%}

@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /search.json
+sitemap: false
+---
+{%- comment -%}
+Build-time search index: title, url, date, tags and the first 200 words of each
+post. Fetched once, on the first keystroke. Short keys because this ships to
+every visitor who searches.
+{%- endcomment -%}
+[
+{%- for post in site.posts -%}
+{%- assign body = post.content | strip_html | normalize_whitespace | truncatewords: 200 -%}
+{"t":{{ post.title | jsonify }},"u":{{ post.url | relative_url | jsonify }},"d":{{ post.date | date: "%Y-%m-%d" | jsonify }},"g":{{ post.tags | jsonify }},"x":{{ body | jsonify }}}{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+]

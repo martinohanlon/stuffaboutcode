@@ -1,0 +1,19 @@
+# The site is built on Linux by GitHub Actions and the importer writes LF, so
+# keep LF in the working tree too. Without this, a Windows checkout rewrites
+# every file to CRLF and `git status` shows churn on files nobody touched.
+* text=auto eol=lf
+
+# The Blogger export is the source of truth for the whole migration. Never let
+# git rewrite its line endings: it must stay byte-identical to what Takeout
+# produced, or re-running _import/convert.py stops being reproducible.
+_import/blog.xml -text
+
+# Binaries
+*.zip binary
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.woff binary
+*.woff2 binary
