@@ -8,7 +8,7 @@ redirect_from:
 
 I recently spent a hour or so hacking a lucky cat so that it would only wave when it was sunny.
 
-> At [@Raspberry_Pi](https://twitter.com/Raspberry_Pi?ref_src=twsrc%5Etfw) 's MakerDay I hacked a lucky cat so it only waves when it's sunny. [pic.twitter.com/JUED5nYadt](https://t.co/JUED5nYadt)
+> At [@Raspberry_Pi](https://twitter.com/Raspberry_Pi?ref_src=twsrc%5Etfw) 's MakerDay I hacked a lucky cat so it only waves when it's sunny. [pic.twitter.com/JUED5nYadt](https://twitter.com/martinohanlon/status/1005342439874486273)
 >
 > — Martin O'Hanlon (@martinohanlon) [June 9, 2018](https://twitter.com/martinohanlon/status/1005342439874486273?ref_src=twsrc%5Etfw)
 

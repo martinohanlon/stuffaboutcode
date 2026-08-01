@@ -310,4 +310,4 @@ I got the basic code to parse an obj file here - [http://programminglinuxgames.b
 
 I used this C code as the basis for my python function to draw line in 3d - [http://www.luberth.com/plotter/line3d.c.txt.html](http://www.luberth.com/plotter/line3d.c.txt.html)
 
-Short link to this post - [http://bit.ly/14mzPXY](http://bit.ly/14mzPXY)
+Short link to this post - [/posts/minecraft-pi-edition-create-massive-3d/](/posts/minecraft-pi-edition-create-massive-3d/)

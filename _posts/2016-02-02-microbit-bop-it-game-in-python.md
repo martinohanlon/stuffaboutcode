@@ -6,7 +6,7 @@ redirect_from:
   - /2016/02/microbit-bop-it-game-in-python.html
 ---
 
-I wanted to create a simple game for the Microbit and after bring brought an [R2D2 Bop-it game](http://amzn.to/1PPYkzw) I thought I would make one whereby you have to press the A and B buttons in time.
+I wanted to create a simple game for the Microbit and after bring brought an [R2D2 Bop-it game](https://www.amazon.co.uk/dp/B013UC5XUG?tag=stuabocod-21) I thought I would make one whereby you have to press the A and B buttons in time.
 
 Lets start by importing the microbit and random libraries:
 
