@@ -64,11 +64,16 @@ jobs:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
           set -euo pipefail
-          before=$(grep -rho 'src="/assets/' _site --include=*.html | wc -l)
+
+          # grep exits 1 when it finds nothing, which under pipefail would fail
+          # this step precisely when the rewrite had worked. Swallow that.
+          count() { { grep -rho 'src="/assets/' _site --include=*.html || true; } | wc -l; }
+
+          before=$(count)
           find _site -name '*.html' -print0 | xargs -0 sed -i \
             -e "s|=\"/assets/|=\"${BASE_PATH}/assets/|g" \
             -e "s|=\"/posts/|=\"${BASE_PATH}/posts/|g"
-          after=$(grep -rho 'src="/assets/' _site --include=*.html | wc -l)
+          after=$(count)
           echo "prefixed $before content asset refs with ${BASE_PATH} ($after left unprefixed)"
           test "$after" -eq 0
 
