@@ -8,13 +8,18 @@ A Jekyll site hosted on GitHub Pages.
 ## Project structure
 
 ```
-├── _config.yml            site config, permalinks, plugins, pagination
+├── _config.yml            site config, permalinks, plugins, pagination, analytics ID
 ├── index.html             the home list (paginated, 7 per page)
+├── 404.html               served by Pages for any unmatched path
 ├── search.json            build-time search index (title, url, date, tags, first 200 words)
+│
+├── .github/workflows/
+│   └── deploy.yml         builds on push to main and publishes to Pages
 │
 ├── _posts/                one file per post — YYYY-MM-DD-slug.md
 ├── _pages/                standalone pages — about, raspberry-pi, minecraft, …
 ├── _drafts/               unpublished work, no date in the filename
+├── search/label/          redirect stubs from the old Blogger label URLs
 │
 ├── _layouts/
 │   ├── default.html       header, content/sidebar grid, footer
@@ -26,7 +31,8 @@ A Jekyll site hosted on GitHub Pages.
 ├── _includes/
 │   ├── head.html          meta, fonts, stylesheet, theme bootstrap
 │   ├── header.html        wordmark, nav, theme toggle
-│   ├── sidebar.html       search, labels, pages, "writing again" card
+│   ├── sidebar.html       search, labels, pages
+│   ├── analytics.html     GA4 — production builds only
 │   ├── footer.html
 │   ├── list-screen.html   list heading + rows + pager (home and tag pages)
 │   ├── post-list.html     the post rows themselves
@@ -114,9 +120,33 @@ Open [http://localhost:4001](http://localhost:4001).
 
 ### Deployment
 
-Not wired up yet. The intent is a GitHub Actions workflow that builds on push
-to `main` and publishes to Pages — that is why the build does not rely on Pages'
-own Jekyll, which restricts plugins.
+Push to `main`. [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+builds the site and publishes it to GitHub Pages. You can also run it by hand
+from the Actions tab.
+
+The build runs in Actions rather than on Pages' own Jekyll, which is pinned to
+an old version and only allows a fixed set of plugins.
+
+Two things the workflow handles that are easy to get wrong by hand:
+
+- **`JEKYLL_ENV=production`.** The analytics snippet is only emitted for a
+  production build. Without this it is silently left out — the deploy goes
+  green and the dashboard stays empty.
+- **`--baseurl`** comes from the Pages configuration, not the config file. It is
+  empty once a custom domain is attached, and `/<repo>` while deploying to a
+  project site, so asset URLs stay correct either way.
+
+Before publishing, the workflow checks the build and fails rather than shipping
+if: a stylesheet, script or `search.json` came out as an HTML document; `404.html`,
+`feed.xml` or `sitemap.xml` is missing; fewer than 136 posts or 136 redirect
+stubs were produced; or any page still points at `googleusercontent.com`.
+
+Those are all failures that have actually happened here, not hypotheticals. The
+stylesheet one in particular returned HTTP 200 with a plausible file size while
+applying no styling whatsoever.
+
+**First run:** in the repository settings, set Pages → Build and deployment →
+Source to **GitHub Actions**. The first push then deploys.
 
 ---
 
@@ -234,6 +264,18 @@ an entry:
 
 The `count` is not calculated, so it needs updating by hand. Keep the list in
 count-descending order.
+
+### Turn analytics off (or change the property)
+
+The GA4 measurement ID lives in `_config.yml`:
+
+```yaml
+google_analytics: G-XXXXXXXXXX
+```
+
+Blank it to disable tracking entirely. It is never emitted by a local build, so
+`jekyll serve` will not report your own browsing as traffic — only the
+production build in Actions includes it.
 
 ### Change the look
 

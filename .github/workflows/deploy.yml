@@ -1,0 +1,86 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build
+        env:
+          # Without this the Google Analytics tag is omitted -- the snippet is
+          # gated on jekyll.environment == "production", which defaults to
+          # "development". It would fail silently and look completely fine.
+          JEKYLL_ENV: production
+        # base_path comes from the Pages config: "" once a custom domain is
+        # attached, "/<repo>" while deploying to a project site. Passing it
+        # keeps asset URLs correct in both cases.
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --trace
+
+      - name: Sanity-check the build
+        run: |
+          set -euo pipefail
+
+          # A stylesheet needs front matter for Jekyll to process it, which also
+          # makes it a Page -- and a layout default can then wrap it in HTML.
+          # That shipped once: HTTP 200, plausible size, not one rule applied.
+          for f in _site/assets/css/main.css _site/assets/js/site.js _site/search.json; do
+            test -s "$f" || { echo "::error::missing or empty: $f"; exit 1; }
+            if head -c 40 "$f" | grep -qiE '<!doctype html|<html'; then
+              echo "::error::$f was rendered as an HTML document"; exit 1
+            fi
+          done
+
+          test -f _site/404.html || { echo "::error::no 404.html"; exit 1; }
+          test -f _site/feed.xml || { echo "::error::no feed.xml"; exit 1; }
+          test -f _site/sitemap.xml || { echo "::error::no sitemap.xml"; exit 1; }
+
+          posts=$(find _site/posts -name index.html | wc -l)
+          test "$posts" -ge 136 || { echo "::error::only $posts posts built"; exit 1; }
+
+          # Every post keeps its original Blogger URL; losing these silently
+          # would break 14 years of inbound links.
+          redirects=$(find _site -regex '.*_site/20[0-9][0-9]/.*\.html' | wc -l)
+          test "$redirects" -ge 136 || { echo "::error::only $redirects redirects built"; exit 1; }
+
+          if grep -rq "blogger.googleusercontent.com" _site --include=*.html; then
+            echo "::error::a page still points at googleusercontent"; exit 1
+          fi
+
+          echo "$posts posts, $redirects redirects, all assets served as themselves"
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
