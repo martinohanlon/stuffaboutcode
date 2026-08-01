@@ -17,7 +17,7 @@ These instructions were taken from [https://github.com/Hexxeh/rpi-update/](https
 **Download rpi-update**
 
 ```bash
-sudo wget http://goo.gl/1BOfJ -O /usr/bin/rpi-update && chmod +x /usr/bin/rpi-update
+sudo wget https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update -O /usr/bin/rpi-update && chmod +x /usr/bin/rpi-update
 ```
 
 **Install ca-certificates**

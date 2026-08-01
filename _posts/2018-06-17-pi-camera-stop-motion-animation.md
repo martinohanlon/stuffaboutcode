@@ -16,7 +16,7 @@ Its a really simple application, you start it up, you click "take image", you re
 
 ![](/assets/img/2018/06/animation1529238449.919678.gif)
 
-You can find the source code at [goo.gl/4Xvu7b](https://goo.gl/4Xvu7b).
+You can find the source code at [gist.github.com/martinohanlon](https://gist.github.com/martinohanlon/52a7557a91d9e5b353a278447fbacc34).
 
 **Install**
  1. Connect a camera module
@@ -26,7 +26,7 @@ You can find the source code at [goo.gl/4Xvu7b](https://goo.gl/4Xvu7b).
 ```bash
 sudo pip3 install guizero
 sudo pip3 install imageio
-wget -O guizero_stopmotion.py https://goo.gl/zMTjas
+wget -O guizero_stopmotion.py https://gist.githubusercontent.com/martinohanlon/52a7557a91d9e5b353a278447fbacc34/raw/guizero_stopmotion.py
 ```
 
 4. Run the program:
