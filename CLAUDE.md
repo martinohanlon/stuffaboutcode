@@ -33,4 +33,3 @@ Drafts go in `_drafts/`. Push to `main` and Actions deploys.
 
 - Redesign anything. If something looks wrong, say so rather than changing it.
 - Touch DNS, the `CNAME` file, or Pages settings without being asked.
-- Delete the archived Blogger export from the repo — it's the source of truth for the whole migration.
