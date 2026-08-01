@@ -45,5 +45,6 @@ Has to be inline and blocking; everything else is deferred.
 })();
 </script>
 <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+{%- include analytics.html -%}
 <link rel="alternate" type="application/atom+xml" title="{{ site.title | strip_html }}" href="{{ '/feed.xml' | relative_url }}">
 <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" sizes="any">

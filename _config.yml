@@ -7,6 +7,9 @@ baseurl: ""
 
 timezone: Europe/London
 
+# GA4. Blank disables tracking entirely; only loaded on a production build.
+google_analytics: G-M0D9WB6JPR
+
 permalink: /posts/:slug/
 
 markdown: kramdown
