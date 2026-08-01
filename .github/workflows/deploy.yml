@@ -36,10 +36,41 @@ jobs:
           # gated on jekyll.environment == "production", which defaults to
           # "development". It would fail silently and look completely fine.
           JEKYLL_ENV: production
-        # base_path comes from the Pages config: "" once a custom domain is
-        # attached, "/<repo>" while deploying to a project site. Passing it
-        # keeps asset URLs correct in both cases.
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --trace
+        # Both the origin and the base path come from the Pages config rather
+        # than being hardcoded. On a project site that is
+        # https://<user>.github.io + /<repo>; once a custom domain is attached
+        # it becomes the real origin with an empty base path. Overriding `url`
+        # matters because the 136 redirect stubs and every canonical tag are
+        # built from it -- left at the production domain, a staging deploy would
+        # bounce visitors straight to the old live site.
+        run: |
+          printf 'url: "%s"\n' "${{ steps.pages.outputs.origin }}" > _config.pages.yml
+          bundle exec jekyll build \
+            --config _config.yml,_config.pages.yml \
+            --baseurl "${{ steps.pages.outputs.base_path }}" \
+            --trace
+
+      # Posts are authored with plain root-absolute paths -- ![](/assets/img/…) --
+      # which is correct at the custom domain and keeps Liquid out of the
+      # Markdown. A project-site deploy serves everything under /<repo>, so the
+      # prefix is injected here instead of taxing every future post.
+      #
+      # Only content carries unprefixed paths; layouts and includes already run
+      # theirs through relative_url. Matching the unprefixed form specifically
+      # is therefore safe and cannot double-prefix.
+      - name: Prefix content paths for a project-site deploy
+        if: steps.pages.outputs.base_path != ''
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          set -euo pipefail
+          before=$(grep -rho 'src="/assets/' _site --include=*.html | wc -l)
+          find _site -name '*.html' -print0 | xargs -0 sed -i \
+            -e "s|=\"/assets/|=\"${BASE_PATH}/assets/|g" \
+            -e "s|=\"/posts/|=\"${BASE_PATH}/posts/|g"
+          after=$(grep -rho 'src="/assets/' _site --include=*.html | wc -l)
+          echo "prefixed $before content asset refs with ${BASE_PATH} ($after left unprefixed)"
+          test "$after" -eq 0
 
       - name: Sanity-check the build
         run: |

@@ -22,3 +22,6 @@ design_handoff_stuffaboutcode_jekyll/
 
 # Blogger Takeout export — kept locally, too large to version
 archive/
+
+# Generated in CI to point url at the Pages origin
+_config.pages.yml
