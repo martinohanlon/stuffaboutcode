@@ -30,6 +30,11 @@ import convert as C  # noqa: E402  share one fence parser
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VERBOSE = "-v" in sys.argv
 HTML_LEFTOVER = re.compile(r"</(div|span|br|font|pre|table|td|tr|b|i|a)\b|<(div|span|font)\b", re.I)
+INLINE_CODE = re.compile(r"`[^`\n]+`")
+
+# Posts dated before this are Blogger imports and must keep their old URL in
+# redirect_from. Posts written since are native and never had one.
+MIGRATION_DATE = "2026-08-01"
 
 
 def files():
@@ -161,7 +166,11 @@ def main():
             if "date:" not in fm:
                 problems["missing date"] += 1
                 issues.append(f"{rel}: no date")
-            if "redirect_from:" not in fm:
+            # Only posts carried over from Blogger have an old URL to preserve.
+            # Anything written since the migration is native to this site and
+            # has never lived anywhere else.
+            migrated = os.path.basename(rel)[:10] < MIGRATION_DATE
+            if migrated and "redirect_from:" not in fm:
                 problems["missing redirect_from"] += 1
                 issues.append(f"{rel}: no redirect_from")
 
@@ -184,7 +193,9 @@ def main():
                         py_other.append((bucket, rel, e.lineno, str(e.msg)))
 
         # markdown hygiene
-        stripped = C.strip_fences(body)
+        # Strip inline `code` as well as fenced blocks: a post may legitimately
+        # quote a tag, e.g. `<span style="font-family: Courier New">`.
+        stripped = INLINE_CODE.sub("", C.strip_fences(body))
         if HTML_LEFTOVER.search(stripped):
             problems["leftover HTML in prose"] += 1
             issues.append(f"{rel}: leftover HTML tags outside code")

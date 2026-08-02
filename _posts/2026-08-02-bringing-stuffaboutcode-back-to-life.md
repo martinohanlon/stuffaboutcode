@@ -6,7 +6,7 @@ tags: [blogging, ai]
 
 This blog stopped in 2018. Not deliberately — I just drifted away from it.
 
-Somewhere along the way I moved into a job where writing and communicating *is* the work, and it turns out that when you write for a living you have a finite amount of writing in you. Every post I might have put here went to the organisation paying me instead. That's a reasonable trade while it lasts, but eight years of it left me with a blog full of Raspberry Pi and Minecraft projects and nothing after 2018.
+Along the way I moved into a job where writing and communicating *is* the work, and it turns out that when you write for a living you have a finite amount of writing in you. Every post I might have put here went to the organisation paying me instead. That's a reasonable trade while it lasts, but eight years of it left me with a blog full of Raspberry Pi and Minecraft projects and nothing after 2018.
 
 ![The old stuffaboutcode.com, running on Blogger](/assets/img/2026/08/old-stuffaboutcode-blogger.png)
 
@@ -54,8 +54,6 @@ None of that is the agent being clever or me being clever. It's just that the fa
 
 ## Open source
 
-The last benefit, and the one I didn't expect to care about as much as I do: the whole site is now public at [github.com/martinohanlon/stuffaboutcode](https://github.com/martinohanlon/stuffaboutcode).
+The last benefit: the whole site is now public at [github.com/martinohanlon/stuffaboutcode](https://github.com/martinohanlon/stuffaboutcode).
 
 Every post is a Markdown file. The theme is one stylesheet and about 200 lines of vanilla JavaScript — no framework, no npm. Push to the repo and GitHub Actions builds and deploys it. If you want to see how something here is done, you can just go and look, which feels right for a blog that has always been about showing people how things work.
-
-Now I've just got to write something.
