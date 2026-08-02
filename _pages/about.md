@@ -5,9 +5,13 @@ redirect_from:
   - /p/about.html
 ---
 
-\<Stuff about="code" /> is Martin O'Hanlon's project blog. I write about the things that I create with code and technology in the hope that others will enjoy them (either through ridicule or admiration).
+\<Stuff about="code" /> is Martin O'Hanlon's project blog. I write about the things I make with code and hardware, in the hope that others will enjoy them (either through ridicule or admiration).
 
-Mostly that means Python, Raspberry Pi and Minecraft, with detours into the micro:bit, GPIO, cameras, robots and whatever else has my attention. The posts here go back to 2012.
+The posts here go back to 2012. Early posts are about Python, Raspberry Pi and Minecraft, with detours into the micro:bit, GPIO, cameras, robots and whatever else had my attention at the time.
+
+Some of what turns up here is cross-posted from somewhere else. Where that's the case the original gets the canonical link and the credit — this is  where I keep a copy, so it's still around when the original isn't.
+
+The site moved off Blogger in 2026, which is [a post in itself](/posts/bringing-stuffaboutcode-back-to-life/). It's a Jekyll site now, and the whole thing is open source at [github.com/martinohanlon/stuffaboutcode](https://github.com/martinohanlon/stuffaboutcode).
 
 ## Licence
 
