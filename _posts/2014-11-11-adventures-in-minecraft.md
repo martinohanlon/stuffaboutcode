@@ -14,7 +14,7 @@ All the adventures, projects and programs in the book work with [Minecraft](http
 
 ![](/assets/img/2014/11/cover.png)
 
-I have created a [small mini site](http://www.stuffaboutcode.com/p/adventures-in-minecraft.html), including a [forum](http://www.stuffaboutcode.com/p/adventures-in-minecraft-forum.html) for the readers of the book to come together get support, share ideas and I personally can't wait to see the projects you create.
+I have created a [small mini site](/adventures-in-minecraft/), including a [forum](/adventures-in-minecraft-forum/) for the readers of the book to come together get support, share ideas and I personally can't wait to see the projects you create.
 
 Its available from [Wiley](http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html), Amazon ([UK](http://www.amazon.co.uk/gp/product/111894691X/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=111894691X&linkCode=as2&tag=stuabocod-21), [US](http://www.amazon.com/gp/product/111894691X/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=111894691X&linkCode=as2&tag=stuabocod-20&linkId=V56BNBRN5NXWF3TG)) and loads of other book stockists.
 

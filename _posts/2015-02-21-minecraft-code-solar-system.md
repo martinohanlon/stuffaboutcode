@@ -6,7 +6,7 @@ redirect_from:
   - /2015/02/minecraft-code-solar-system.html
 ---
 
-*Update - I took this further and created a DeathStar to blow up planets too, in a [Minecraft Star Wars](http://www.stuffaboutcode.com/2015/03/minecraft-star-wars.html) animation.*
+*Update - I took this further and created a DeathStar to blow up planets too, in a [Minecraft Star Wars](/posts/minecraft-star-wars/) animation.*
 
 Every wondered how big the Sun is? Well check out the picture below.
 

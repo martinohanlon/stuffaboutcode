@@ -6,7 +6,7 @@ redirect_from:
   - /2014/07/minecraft-fractal-trees.html
 ---
 
-I have been experimenting with the [Minecraft Graphics Turtle](http://www.stuffaboutcode.com/2014/05/minecraft-graphics-turtle.html) I created, its a typical graphics turtle in that you issue it commands such as forward, backward, left, right but you can also tell it to go up and down and go 3d!
+I have been experimenting with the [Minecraft Graphics Turtle](/posts/minecraft-graphics-turtle/) I created, its a typical graphics turtle in that you issue it commands such as forward, backward, left, right but you can also tell it to go up and down and go 3d!
 
 I wanted to create something that took advantage of the 3d world available in Minecraft and decided to see if I could make some 3d fractals. Fractals are repeating patterns which when observed at different scales appear the same - I know that sounds like rubbish, but that's what they are!
 
@@ -112,7 +112,7 @@ tree(20, steve)
 
 The other change I made was to change the block type so that the shorter branches (the ones at the top) are made of leaves and the ones at the bottom are made of wood.
 
-I created these on the full version of [Minecraft using Bukkit and Raspberry Juice](http://www.stuffaboutcode.com/2013/06/programming-minecraft-with-bukkit.html), so I could take hi-def pictures but the same code works on the raspberry pi.
+I created these on the full version of [Minecraft using Bukkit and Raspberry Juice](/posts/programming-minecraft-with-bukkit/), so I could take hi-def pictures but the same code works on the raspberry pi.
 
 If you want to have a go, download the minecraft turtle code from [github.com/martinohanlon/minecraft-turtle](https://github.com/martinohanlon/minecraft-turtle) and run the [example_3dfractaltree.py](https://github.com/martinohanlon/minecraft-turtle/blob/master/example_3dfractaltree.py) program:
 

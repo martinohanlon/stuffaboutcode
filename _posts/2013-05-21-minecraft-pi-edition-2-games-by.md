@@ -6,7 +6,7 @@ redirect_from:
   - /2013/05/minecraft-pi-edition-2-games-by.html
 ---
 
-[Nicholas Harris](https://plus.google.com/109549225711376378768/posts) is a regular commenter and reader of the minecraft posts on [\<Stuff about="code" />](http://www.stuffaboutcode.com/) and he let me know that he was working on a program for minecraft, he also agreed to let me include a post about what he has done. Check out the [Minecraft - API Basics](http://www.stuffaboutcode.com/2013/01/raspberry-pi-minecraft-api-basics.html) comments section for a description of Nicholas's development.
+[Nicholas Harris](https://plus.google.com/109549225711376378768/posts) is a regular commenter and reader of the minecraft posts on [\<Stuff about="code" />](/) and he let me know that he was working on a program for minecraft, he also agreed to let me include a post about what he has done. Check out the [Minecraft - API Basics](/posts/raspberry-pi-minecraft-api-basics/) comments section for a description of Nicholas's development.
 
 ![](/assets/img/2013/05/sam_0901.jpg)
 

@@ -10,7 +10,7 @@ Myself and David Whale (my co-author on [Adventures in Minecraft](http://www.wil
 
 ![](/assets/img/2015/03/thatsnomoon.jpg)
 
-After coding the [Solar System in Minecraft](http://www.stuffaboutcode.com/2015/02/minecraft-code-solar-system.html) I had the idea of creating the Death Star which would be able to 'fire' at the planets and destroy them. I ended up coding an animation of the Death Star destroying Alderaan right up to Luke flying down the trench and successfully bombing the exhaust port with a block of TNT.
+After coding the [Solar System in Minecraft](/posts/minecraft-code-solar-system/) I had the idea of creating the Death Star which would be able to 'fire' at the planets and destroy them. I ended up coding an animation of the Death Star destroying Alderaan right up to Luke flying down the trench and successfully bombing the exhaust port with a block of TNT.
 
 {% include youtube.html id="pufDQo9o0gk" %}
 

@@ -6,7 +6,7 @@ redirect_from:
   - /2016/04/mayhem-classic-amiga-game-ported-to.html
 ---
 
-*Update - I've taken Mayhem forward to create [Mayhem 2](http://www.stuffaboutcode.com/2016/06/mayhem-2-open-source-cave-shooter.html).*
+*Update - I've taken Mayhem forward to create [Mayhem 2](/posts/mayhem-2-open-source-cave-shooter/).*
 
 I had a [Commodore Amiga](https://en.wikipedia.org/wiki/Amiga) and a game I played, a lot, was [Mayhem](http://www.lemonamiga.com/games/details.php?id=2972), its a multiplayer (2-4) shooter - imagine multiplayer asteroids, with gravity, fuel and shields!
 

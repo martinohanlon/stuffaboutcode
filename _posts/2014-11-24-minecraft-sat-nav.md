@@ -33,7 +33,7 @@ and it will give you a street by street navigation between your location and a t
 **You want to have a go yourself? Here's a guide:**
 
 1. Buy yourself a copy of [Adventures in Minecraft](http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html) ;) - honestly you really cant go wrong and it'll teach you what you need to know to make your own Minecraft Sat Nav!
-2. Setup a [Canarymod server with RaspberryJuice](http://www.stuffaboutcode.com/2014/10/minecraft-raspberryjuice-and-canarymod.html)
+2. Setup a [Canarymod server with RaspberryJuice](/posts/minecraft-raspberryjuice-and-canarymod/)
 3. Download the [Ordnance Survey Minecraft GB map](http://www.ordnancesurvey.co.uk/innovate/developers/minecraft-map-britain.html)
 4. Replace the default world in canarymod with the Minecraft GB map
 5. Download the[Minecraft Sat Nav](https://github.com/martinohanlon/minecraft-osmapnav) program

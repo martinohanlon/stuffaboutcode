@@ -8,7 +8,7 @@ redirect_from:
 
 I recently attended the Raspberry Jamboree in Manchester on the 28th February. It was great fun and really good to meet a load of other people from the Raspberry Pi community.
 
-I did a presentation about [Minecraft](http://www.stuffaboutcode.com/p/minecraft.html) on the Raspberry Pi and why I think its a good thing.
+I did a presentation about [Minecraft](/minecraft/) on the Raspberry Pi and why I think its a good thing.
 
 {% include youtube.html id="089CoGZ8UpI" %}
 
@@ -16,11 +16,11 @@ I also ran a Hacking Minecraft workshop, which you can [download here](https://d
 
 You can find more information and code listings for the demos below:
 
-[A tutorial on using the Minecraft: Pi edition API](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html).
-[Minecraft Music Visualiser](http://www.stuffaboutcode.com/2014/02/minecraft-music-visualiser.html).
-[Minecraft Auto Bridge](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-auto-bridge.html).
-[Minecraft Snake Game](http://www.stuffaboutcode.com/2013/03/raspberry-pi-minecraft-snake.html).
-[Minecraft Cannon](http://www.stuffaboutcode.com/2013/04/raspberry-pi-minecraft-cannon.html).
+[A tutorial on using the Minecraft: Pi edition API](/posts/minecraft-pi-edition-api-tutorial/).
+[Minecraft Music Visualiser](/posts/minecraft-music-visualiser/).
+[Minecraft Auto Bridge](/posts/raspberry-pi-minecraft-auto-bridge/).
+[Minecraft Snake Game](/posts/raspberry-pi-minecraft-snake/).
+[Minecraft Cannon](/posts/raspberry-pi-minecraft-cannon/).
 
 I also demo'd a program to built a house which then follows you wherever you go.
 

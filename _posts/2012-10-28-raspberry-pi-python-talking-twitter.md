@@ -17,13 +17,13 @@ Its not really a finished program, more, a proof of concept, but I thought it mi
 There are a few pre-requisites to getting this to work.
 
 **Create a twitter app**
- You need to create a twitter app using your twitter id, you can do this by visiting [dev.twitter.com](http://dev.twitter.com/), signing on, and clicking create app; if you are having problems see a previous blog post of mine, [automatically posting updates to twitter](http://www.stuffaboutcode.com/2012/04/automatically-posting-updates-to.html), which has some in-depth instructions.
+ You need to create a twitter app using your twitter id, you can do this by visiting [dev.twitter.com](http://dev.twitter.com/), signing on, and clicking create app; if you are having problems see a previous blog post of mine, [automatically posting updates to twitter](/posts/automatically-posting-updates-to/), which has some in-depth instructions.
 
 **Install python-oauth**
  I used [leah's python oauth module](https://github.com/leah/python-oauth.git) to authenticate with twitter.
 
 ***Install distribute***
- If you have never installed python modules before you are going to need to install the python setup tools, module, distribute, see blog post, [python - installing modules](http://www.stuffaboutcode.com/2012/10/raspberry-pi-python-installing-modules.html), for info on how to do this.
+ If you have never installed python modules before you are going to need to install the python setup tools, module, distribute, see blog post, [python - installing modules](/posts/raspberry-pi-python-installing-modules/), for info on how to do this.
 
 ***Install git-core***
  In order to get the code from github you need to install git-core tools.

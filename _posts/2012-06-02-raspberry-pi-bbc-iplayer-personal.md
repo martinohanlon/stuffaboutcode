@@ -22,7 +22,7 @@ Every hour a scheduled job (CRON) runs a series of commands:
 
 - The DVR function in get_iplayer in called which downloads and encodes any new programmes which have become available since it last ran. [See post re get_iplayer setup.](http://stuffaboutcode.blogspot.co.uk/2012/06/raspberry-pi-getiplayer-setup-and.html)
 - A script then moves the programmes from the SD onto my NAS drive using Samba. [See post re connecting to a NAS](http://stuffaboutcode.blogspot.co.uk/2012/05/raspberry-pi-connect-nas-windows-share.html).
-- A small python program, [get_iplayer_genrss](http://www.stuffaboutcode.com/p/getiplayergenrss.html), then runs which uses the get_iplayer download history to write out a RSS file which contains the latest programmes which have been downloaded. [See here for installation and usage.](http://www.stuffaboutcode.com/p/getiplayergenrss.html)
+- A small python program, [get_iplayer_genrss](/getiplayergenrss/), then runs which uses the get_iplayer download history to write out a RSS file which contains the latest programmes which have been downloaded. [See here for installation and usage.](/getiplayergenrss/)
 
 Lighttpd (lighty) is then used to provide http access to the RSS file and the programmes via a symbolic link to the NAS drive.
 

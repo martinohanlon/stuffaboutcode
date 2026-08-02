@@ -8,7 +8,7 @@ redirect_from:
 
 I've been working on an [update](https://github.com/RPi-Distro/python-gpiozero/pull/488) to [gpiozero](http://gpiozero.readthedocs.io/en/v1.3.1/) to add a 7 segment display - hopefully this will make it into gpiozero soon, but until then if you want to use a 7 segment display with your Raspberry Pi you can follow the details below.
 
-*Update - I have updated this to support single and [multiple digit 7 segment displays](http://www.stuffaboutcode.com/2017/01/raspberry-pi-4-digit-7-segment-display.html).*
+*Update - I have updated this to support single and [multiple digit 7 segment displays](/posts/raspberry-pi-4-digit-7-segment-display/).*
 
 ![](/assets/img/2016/10/7segment.jpg)
 

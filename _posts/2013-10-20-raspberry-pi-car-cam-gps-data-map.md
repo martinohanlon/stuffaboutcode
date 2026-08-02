@@ -6,7 +6,7 @@ redirect_from:
   - /2013/10/raspberry-pi-car-cam-gps-data-map.html
 ---
 
-Ever since I made my [car cam which recorded video and overlaid OBD data](http://www.stuffaboutcode.com/2013/07/raspberry-pi-car-cam-overlaid-with-obd.html), I've continued to work on the project and in particular on overlaying GPS data. I wanted to create something which was similar to the mini map you get on car racing games which shows you where the car is on the track as its going round.
+Ever since I made my [car cam which recorded video and overlaid OBD data](/posts/raspberry-pi-car-cam-overlaid-with-obd/), I've continued to work on the project and in particular on overlaying GPS data. I wanted to create something which was similar to the mini map you get on car racing games which shows you where the car is on the track as its going round.
 
 {% include youtube.html id="Wv_zeE10arg" %}
 
@@ -14,9 +14,9 @@ Im not at a race track often, so I took Mrs O'Hanlon's fiesta for a spin around 
 
 This has been a pretty intense project, probably the most complex I've done with the raspberry pi and has involved several steps:
 
-1. I needed a better way of syncing data gathered by the Pi with video taken on the camera, with my first OBD overlay it was 'VERY' difficult to get it lined up. To acheive this I made a custom version of [Raspivid to allow me to read, in real time, what frame it was on](http://www.stuffaboutcode.com/2013/09/raspberry-pi-syncing-data-with-raspivid.html)
-2. I had to create a [python class to control raspivid](http://www.stuffaboutcode.com/2013/09/raspberry-pi-run-raspivid-with-python.html)
-3. I had to set up a [GPS receiver and create a python class to control it](http://www.stuffaboutcode.com/2013/09/raspberry-pi-gps-setup-and-python.html)
+1. I needed a better way of syncing data gathered by the Pi with video taken on the camera, with my first OBD overlay it was 'VERY' difficult to get it lined up. To acheive this I made a custom version of [Raspivid to allow me to read, in real time, what frame it was on](/posts/raspberry-pi-syncing-data-with-raspivid/)
+2. I had to create a [python class to control raspivid](/posts/raspberry-pi-run-raspivid-with-python/)
+3. I had to set up a [GPS receiver and create a python class to control it](/posts/raspberry-pi-gps-setup-and-python/)
 
 I then wrote a program which would start up my custom raspivid program, read the frame number alongside the GPS data and create a separate movie which would be the map and the data. I could then overlay the data video on top of the camera video and bingo, mini map on the side of my car video.
 

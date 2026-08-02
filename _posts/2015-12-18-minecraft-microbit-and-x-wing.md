@@ -8,7 +8,7 @@ redirect_from:
 
 I was having a chat with [David Whale](https://twitter.com/whaleygeek), my co-author of [Adventures in Minecraft](http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111894691X.html) and he remarked that wouldn't it be cool if you could control something in Minecraft using the Microbit. (Btw - you should definitely check out David's virtual [Minecraft Microbit](https://github.com/whaleygeek/mc_microbit).)
 
-I settled on the idea of using the Microbit's accelerometer to control an object flying through Minecraft. What object, well it had to be the X-Wing, from my previous [Minecraft - Star Wars](http://www.stuffaboutcode.com/2015/03/minecraft-star-wars.html) project.
+I settled on the idea of using the Microbit's accelerometer to control an object flying through Minecraft. What object, well it had to be the X-Wing, from my previous [Minecraft - Star Wars](/posts/minecraft-star-wars/) project.
 
 ![](/assets/img/2015/12/minecraft_microbit.jpg)
 

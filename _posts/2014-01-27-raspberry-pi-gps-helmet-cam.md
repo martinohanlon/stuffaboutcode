@@ -14,17 +14,17 @@ I wanted to make my own helmet cam which would also show data about what was goi
 
 *Raspberry Pi GPS Helmet Cam*
 
-The starting point was my [Raspberry Pi GPS Tracking Car Dash Cam](http://www.stuffaboutcode.com/2013/10/raspberry-pi-car-cam-gps-data-map.html), this gave me some code for gathering GPS data, recording video and generating data overlay video's.
+The starting point was my [Raspberry Pi GPS Tracking Car Dash Cam](/posts/raspberry-pi-car-cam-gps-data-map/), this gave me some code for gathering GPS data, recording video and generating data overlay video's.
 
 I came up with a 1 led, 1 button design; the led flashes when the cam is 'ready' (quickly when there isn't a GPS fix, slowly when there is GPS fix), the led comes on when the camera is recording, a short button press starts / stops the camera and a long button press shutdowns the helmet cam.
 
-I set about writing the code which would run at start-up of the Pi and control the camera, waiting for the button to be pressed, controlling the led, reading the [GPS data](http://www.stuffaboutcode.com/2013/09/raspberry-pi-gps-setup-and-python.html) and [temperature data](http://www.stuffaboutcode.com/2013/12/raspberry-pi-python-temp-sensor-ds18b20.html) and start / stop the camera.
+I set about writing the code which would run at start-up of the Pi and control the camera, waiting for the button to be pressed, controlling the led, reading the [GPS data](/posts/raspberry-pi-gps-setup-and-python/) and [temperature data](/posts/raspberry-pi-python-temp-sensor-ds18b20/) and start / stop the camera.
 
 The program is multi-threaded and simply starts up a thread for each 'thing' (led, button, GPS, temperature sensor) that needs to be 'controlled', the main program then polls these controllers asking them if anything has changed and acts accordingly (e.g. starting / stopping the camera, shutting down the pi).
 
-When the camera is started , the program uses the excellent python module, [picamera](http://www.stuffaboutcode.com/2014/01/raspberry-pi-camera-python-picamera.html), to start the video capture and writes the gps and temperature data to a file while the video is recording. I made a change to the picamera module (which has since been [introduced](https://github.com/waveform80/picamera/issues/34)), this gave me a function to read the current frame number while the video was being recorded, allowing me to sync the data I have read to an exact position in the video.
+When the camera is started , the program uses the excellent python module, [picamera](/posts/raspberry-pi-camera-python-picamera/), to start the video capture and writes the gps and temperature data to a file while the video is recording. I made a change to the picamera module (which has since been [introduced](https://github.com/waveform80/picamera/issues/34)), this gave me a function to read the current frame number while the video was being recorded, allowing me to sync the data I have read to an exact position in the video.
 
-I then use the data file to create a data video which I ultimately overly on top of the video taken from the helmet cam. The data video is created in exactly the same way as my [Raspberry Pi GPS Car Dash Cam](http://www.stuffaboutcode.com/2013/10/raspberry-pi-car-cam-gps-data-map.html), by creating individual images for each frame using PIL (python imaging library).
+I then use the data file to create a data video which I ultimately overly on top of the video taken from the helmet cam. The data video is created in exactly the same way as my [Raspberry Pi GPS Car Dash Cam](/posts/raspberry-pi-car-cam-gps-data-map/), by creating individual images for each frame using PIL (python imaging library).
 
 ![](/assets/img/2014/01/000716.jpg)
 
@@ -66,7 +66,7 @@ There are a number of python modules which make up the helmet cam code:
 
 I also created a few bash scripts to make things easier to manage:
  - [runPelmetcam.sh](https://github.com/martinohanlon/pelmetcam/blob/master/runPelmetcam.sh) - this is run when the pi boots and starts up the helmet cam, including the GPS daemon, temp sensor modules and shuts down the pi when the program finishes
- - [runPelmetcam.init](https://github.com/martinohanlon/pelmetcam/blob/master/runPelmetcam.init) - init.d script to make runPelmetcam.sh run at boot, see this [post](http://www.stuffaboutcode.com/2012/06/raspberry-pi-run-program-at-start-up.html) for information on running commands at boot
+ - [runPelmetcam.init](https://github.com/martinohanlon/pelmetcam/blob/master/runPelmetcam.init) - init.d script to make runPelmetcam.sh run at boot, see this [post](/posts/raspberry-pi-run-program-at-start-up/) for information on running commands at boot
  - [createVideos.sh](https://github.com/martinohanlon/pelmetcam/blob/master/createVideos.sh) - runs the commands to make the main video into an MP4, creating the data overlay images and encoding them into a video file
 
 **Challenges**

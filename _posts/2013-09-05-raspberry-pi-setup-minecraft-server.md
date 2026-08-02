@@ -6,7 +6,7 @@ redirect_from:
   - /2013/09/raspberry-pi-setup-minecraft-server.html
 ---
 
-Update - if you have a [Raspberry Pi 2, it makes a much better Minecraft server](http://www.stuffaboutcode.com/2015/02/raspberry-pi-2-minecraft-server.html).
+Update - if you have a [Raspberry Pi 2, it makes a much better Minecraft server](/posts/raspberry-pi-2-minecraft-server/).
 
 This is my 'recipe' for setting up a minecraft server on a raspberry pi. I used information I found in the following pages to setup my minecraft server, [http://wiki.bukkit.org/Setting_up_a_server](http://wiki.bukkit.org/Setting_up_a_server), [http://picraftbukkit.webs.com/pi-minecraft-server-how-to](http://picraftbukkit.webs.com/pi-minecraft-server-how-to), [http://www.raspberrypi.org/archives/4621](http://www.raspberrypi.org/archives/4621).
 
@@ -28,7 +28,7 @@ Choose Yes to reboot
 **Static IP address**
  This isn't essential but I find it a lot easier to manage the minecraft pi server if its got a static IP address; its easier to connect to as the IP address never changes and if you want to make it public it makes port forwarding simpler too.
 
-See this [post](http://www.stuffaboutcode.com/2012/05/raspberry-pi-setting-static-ip-address.html) for details on [how to give your Raspberry Pi a static IP address](http://www.stuffaboutcode.com/2012/05/raspberry-pi-setting-static-ip-address.html).
+See this [post](/posts/raspberry-pi-setting-static-ip-address/) for details on [how to give your Raspberry Pi a static IP address](/posts/raspberry-pi-setting-static-ip-address/).
 
 **Install Java**
  Java isn't installed on the Pi, so this is the first step:
@@ -277,7 +277,7 @@ Ctrl A, D
 ```
 
 **Running Minecraft:Pi Edition programs**
- I setup my minecraft server originally to show people what you could do with the Minecraft: Pi edition's API, , even though the raspberry juice plugin doesn't support all of the API functions, you can run most of the same programs on your server as you would on the minecraft Pi edition. If you want to try it out, the [minecraft clock](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-analogue-clock.html) I created works really well. Startup the server, download the code and run it.
+ I setup my minecraft server originally to show people what you could do with the Minecraft: Pi edition's API, , even though the raspberry juice plugin doesn't support all of the API functions, you can run most of the same programs on your server as you would on the minecraft Pi edition. If you want to try it out, the [minecraft clock](/posts/raspberry-pi-minecraft-analogue-clock/) I created works really well. Startup the server, download the code and run it.
 
 ```bash
 sudo apt-get install git-core

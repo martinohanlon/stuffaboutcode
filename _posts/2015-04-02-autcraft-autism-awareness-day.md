@@ -18,7 +18,7 @@ He started Autcraft because there were so many Autistic children who where bulli
 
 The animation is all written in Python and a lot of the code is borrowed from some of my other Minecraft projects.
 
-The code to create the diamond block text was taken from my [Minecraft twitter client](http://www.stuffaboutcode.com/2013/08/raspberry-pi-minecraft-twitter.html) and the leg and boot is created in the same way I create and move around the ships in the Minecraft Starwars animation.
+The code to create the diamond block text was taken from my [Minecraft twitter client](/posts/raspberry-pi-minecraft-twitter/) and the leg and boot is created in the same way I create and move around the ships in the Minecraft Starwars animation.
 
 The rest of it is just Monty Python inspire silliness with a very important message "don't stand for bullying".
 

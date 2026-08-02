@@ -8,7 +8,7 @@ redirect_from:
 
 Anyway, I've been waiting for minecraft to appear on the Pi since it was announced in Nov 2012, the api into the game really appeals and I'm really keen to play about with it and I cant believe I didn't know that a [pre-release version was leaked](http://www.minecraftforum.net/topic/1587033-minecraft-pi-features-and-news-pre-release-leaked/). I was itching to have a go and this is how I installed it:
 
-**NOTE - The official release of Minecraft is now available, see this [post](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-install.html) for [how to install Minecraft: Pi Edition](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-install.html).**
+**NOTE - The official release of Minecraft is now available, see this [post](/posts/raspberry-pi-minecraft-install/) for [how to install Minecraft: Pi Edition](/posts/raspberry-pi-minecraft-install/).**
 
 Open LXTerminal from the X desktop
 
@@ -37,4 +37,4 @@ Note - minecraft has to be run directly on the Pi, it wont work from ssh or via 
 
 Be warned, this [pre release version has a number of bugs](http://www.minecraftforum.net/topic/1587033-minecraft-pi-features-and-news-pre-release-leaked/).
 
-Update - I've been playing around with the [Minecraft API and have included a video and source code](http://www.stuffaboutcode.com/2013/01/raspberry-pi-minecraft-api-basics.html).
+Update - I've been playing around with the [Minecraft API and have included a video and source code](/posts/raspberry-pi-minecraft-api-basics/).

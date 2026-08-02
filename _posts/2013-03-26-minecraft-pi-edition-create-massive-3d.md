@@ -28,7 +28,7 @@ What about a program that takes a 3d model, runs through all those points and po
 | ![](/assets/img/2013/03/sam_0858.jpg) |   |   |   |
 | Girls head |   |   |   |
 
-**Update -**Ive pushed the boundaries of this program much further and rendered [Manhattan Island in Minecraft](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-manhattan-stroll.html).
+**Update -**Ive pushed the boundaries of this program much further and rendered [Manhattan Island in Minecraft](/posts/minecraft-pi-edition-manhattan-stroll/).
 
 | ![](/assets/img/2013/03/ny_lil.png) | ![](/assets/img/2013/03/empirestate.jpg) |
 | --- | --- |
@@ -44,7 +44,7 @@ The models need to be scaled appropriately to be able to fit in the minecraft wo
 
 At the moment the program only uses the vertices and faces within the obj files, but it certainly could be extended to create filled polygons rather than wireframe, cope with curves and potentially to use different surfaces and textures.
 
-**Update** - I have created [version 2 of this program](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-3d-models-version-2.html), which draws filled polygons and uses the materials within obj files to pick an appropriate block, allowing the model to now be in 'colour'.
+**Update** - I have created [version 2 of this program](/posts/minecraft-pi-edition-3d-models-version-2/), which draws filled polygons and uses the materials within obj files to pick an appropriate block, allowing the model to now be in 'colour'.
 
 ![](/assets/img/2013/03/sam_0872.jpg)
 

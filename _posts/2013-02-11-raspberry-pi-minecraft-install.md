@@ -35,6 +35,6 @@ Note - minecraft has to be run directly on the Pi, it wont work from ssh or via 
 **API**
  By far the best thing about the Minecraft: Pi edition (other than it being free) is the api which allows you to interact with the world in real time. Ive created a few posts / tutorials / interesting things about the Minecraft API:
 
-- [Minecraft - API - The basics](http://www.stuffaboutcode.com/2013/01/raspberry-pi-minecraft-api-basics.html) - an basic introduction into the Minecraft API, its functions and how to use it.
-- [Minecraft - API - Tutorial](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html) - an in-depth look at the API, the concepts and how to use it.
-- [Minecraft Projects](http://www.stuffaboutcode.com/p/minecraft.html) - projects I have built using the API, such as:
+- [Minecraft - API - The basics](/posts/raspberry-pi-minecraft-api-basics/) - an basic introduction into the Minecraft API, its functions and how to use it.
+- [Minecraft - API - Tutorial](/posts/minecraft-pi-edition-api-tutorial/) - an in-depth look at the API, the concepts and how to use it.
+- [Minecraft Projects](/minecraft/) - projects I have built using the API, such as:

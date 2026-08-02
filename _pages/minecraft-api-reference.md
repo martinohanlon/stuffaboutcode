@@ -5,9 +5,9 @@ redirect_from:
   - /p/minecraft-api-reference.html
 ---
 
-This is a reference of Minecraft Python API Library, which is supported on Minecraft: Pi edition and the PC version using the [RaspberryJuice](http://www.stuffaboutcode.com/2014/10/minecraft-raspberryjuice-and-canarymod.html) plugin.
+This is a reference of Minecraft Python API Library, which is supported on Minecraft: Pi edition and the PC version using the [RaspberryJuice](/posts/minecraft-raspberryjuice-and-canarymod/) plugin.
 
-If you want to know more about how to use the API, including tutorials, see my projects and download code, visit my [minecraft](http://www.stuffaboutcode.com/p/minecraft.html) page.
+If you want to know more about how to use the API, including tutorials, see my projects and download code, visit my [minecraft](/minecraft/) page.
 
 ## Structure
 

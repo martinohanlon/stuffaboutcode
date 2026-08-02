@@ -6,7 +6,7 @@ redirect_from:
   - /2016/06/mayhem-2-open-source-cave-shooter.html
 ---
 
-I recently [ported an abandoned version the classic amiga game, Mayhem, to the Raspberry Pi](http://www.stuffaboutcode.com/2016/04/mayhem-classic-amiga-game-ported-to.html) - I did this exclusively so I could play the game with my friend, Lee, using [RetroPie](http://retropie.org/).
+I recently [ported an abandoned version the classic amiga game, Mayhem, to the Raspberry Pi](/posts/mayhem-classic-amiga-game-ported-to/) - I did this exclusively so I could play the game with my friend, Lee, using [RetroPie](http://retropie.org/).
 
 Since then myself and Lee, an artist for sumo digital, have been modding the game, adding new levels, features and controls - it now really is Mayhem **2**.
 

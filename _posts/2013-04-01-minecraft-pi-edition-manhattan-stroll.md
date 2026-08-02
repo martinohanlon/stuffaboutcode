@@ -16,7 +16,7 @@ How about a stroll around Manhattan? Well a stroll around Manhattan in Minecraft
 
 *View from "Top of the Rock"*
 
-I decided to see how much I could push the program I wrote which uses the API in the Pi edition of Minecraft to [render 3d models in the Minecraft World](http://www.stuffaboutcode.com/2013/03/minecraft-pi-edition-create-massive-3d.html). It turns out I could push it a LOT, I fancied creating a city scene, and is any more dramatic than New York, Manhattan Island.
+I decided to see how much I could push the program I wrote which uses the API in the Pi edition of Minecraft to [render 3d models in the Minecraft World](/posts/minecraft-pi-edition-create-massive-3d/). It turns out I could push it a LOT, I fancied creating a city scene, and is any more dramatic than New York, Manhattan Island.
 
 {% include youtube.html id="yZFKd5QkcPo" %}
 
@@ -35,7 +35,7 @@ The model is pre 9/11, so the iconic Twin Towers still dominate the skyline.
 *Iconic buildings*
 
 **Download and run**
- I have updated my [program](http://www.stuffaboutcode.com/2013/03/minecraft-pi-edition-create-massive-3d.html)to include the new york model, which you can download direct from [git-hub](https://github.com/martinohanlon/minecraft-renderObj.git), so run minecraft, open/create a world and follow the instructions:
+ I have updated my [program](/posts/minecraft-pi-edition-create-massive-3d/)to include the new york model, which you can download direct from [git-hub](https://github.com/martinohanlon/minecraft-renderObj.git), so run minecraft, open/create a world and follow the instructions:
 
 ```bash
 sudo apt-get install git-core
@@ -45,4 +45,4 @@ cd minecraft-renderObj
 python minecraft-renderObj.py
 ```
 
-If you want to know more about how this works and have a go yourself, head to this post, [http://www.stuffaboutcode.com/2013/03/minecraft-pi-edition-create-massive-3d.html](http://www.stuffaboutcode.com/2013/03/minecraft-pi-edition-create-massive-3d.html).
+If you want to know more about how this works and have a go yourself, head to this post, [www.stuffaboutcode.com/posts/minecraft-pi-edition-create-massive-3d/](/posts/minecraft-pi-edition-create-massive-3d/).

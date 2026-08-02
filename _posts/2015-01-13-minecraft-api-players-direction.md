@@ -8,9 +8,9 @@ redirect_from:
 
 ![](/assets/img/2015/01/2014-06-03_22.16.15.png)One of the questions I get asked a lot about the Minecraft: Pi edition APi is "how can I get the direction the player is facing?" and I have always had to say "sorry you can't do that".
 
-While I can't change the API for Minecraft: Pi edition I can change [RaspberryJuice](http://www.stuffaboutcode.com/2014/10/minecraft-raspberryjuice-and-canarymod.html) - so I decided to add functions to allow you to find out where the player is looking. You can download the RaspberryJuice plugin [Canarymod](http://canarymod.net/plugins/raspberry-juice) and [Bukkit](http://dev.bukkit.org/bukkit-plugins/raspberryjuice/).
+While I can't change the API for Minecraft: Pi edition I can change [RaspberryJuice](/posts/minecraft-raspberryjuice-and-canarymod/) - so I decided to add functions to allow you to find out where the player is looking. You can download the RaspberryJuice plugin [Canarymod](http://canarymod.net/plugins/raspberry-juice) and [Bukkit](http://dev.bukkit.org/bukkit-plugins/raspberryjuice/).
 
-I have also created a new [Adventures in Minecraft starterkit](http://www.stuffaboutcode.com/p/adventures-in-minecraft-forum.html?place=msg%2Fadventures-in-minecraft-forum%2FG3MuBXDwoqw%2Fp3KE-yc3OkgJ) which includes the new version of RapsberryJuice and everything you need to use the new api functions.
+I have also created a new [Adventures in Minecraft starterkit](/adventures-in-minecraft-forum/) which includes the new version of RapsberryJuice and everything you need to use the new api functions.
 
 {% include youtube.html id="b6Y9pIGC4c8" %}
 

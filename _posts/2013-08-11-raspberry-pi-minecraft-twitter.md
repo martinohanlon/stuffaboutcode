@@ -19,10 +19,10 @@ This is the team I was mentoring at YRS, a particular mention needs to go to Ste
 **Install**
 
 ***Create a twitter app***
- You need to create a twitter app using your twitter id, you can do this by visiting [dev.twitter.com](http://dev.twitter.com/), signing on, and clicking create app; if you are having problems see a previous blog post of mine, [automatically posting updates to twitter](http://www.stuffaboutcode.com/2012/04/automatically-posting-updates-to.html), which has some in-depth instructions.
+ You need to create a twitter app using your twitter id, you can do this by visiting [dev.twitter.com](http://dev.twitter.com/), signing on, and clicking create app; if you are having problems see a previous blog post of mine, [automatically posting updates to twitter](/posts/automatically-posting-updates-to/), which has some in-depth instructions.
 
 ***Install python oauth & pycurl***
- We need a couple of python modules to get the twitter feed working. If you have never installed python modules before you are going to need to install the python setup tools module, distribute, see blog post, [python - installing modules](http://www.stuffaboutcode.com/2012/10/raspberry-pi-python-installing-modules.html), for info on how to do this.
+ We need a couple of python modules to get the twitter feed working. If you have never installed python modules before you are going to need to install the python setup tools module, distribute, see blog post, [python - installing modules](/posts/raspberry-pi-python-installing-modules/), for info on how to do this.
 
 ```bash
 sudo apt-get install git-core

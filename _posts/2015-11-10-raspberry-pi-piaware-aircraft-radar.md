@@ -6,7 +6,7 @@ redirect_from:
   - /2015/11/raspberry-pi-piaware-aircraft-radar.html
 ---
 
-After creating the [PiAware Flight Indicator LED](http://www.stuffaboutcode.com/2015/10/piaware-aircraft-overhead-led.html) I was keen to see what else I could do with the aircraft data my [PiAware](https://uk.flightaware.com/adsb/piaware/) setup was retrieving for me.
+After creating the [PiAware Flight Indicator LED](/posts/piaware-aircraft-overhead-led/) I was keen to see what else I could do with the aircraft data my [PiAware](https://uk.flightaware.com/adsb/piaware/) setup was retrieving for me.
 
 I thought I would see if I could make an 'old fashioned' radar to show what aircraft were being picked up so I could have my own desk based radar.
 
@@ -16,7 +16,7 @@ I thought I would see if I could make an 'old fashioned' radar to show what airc
 
 I found an example of a [radar written in pygame](http://simpson.edu/computer-science/), which became the basis of my code (although I am pretty sure the original author wouldn't recognise it now) and created a [radar class](https://github.com/martinohanlon/PiAwareRadar/blob/master/piawareradar/radar.py).
 
-I plugged in the GPS coordinates of the aircraft using the [PiAware flight data class](http://www.stuffaboutcode.com/2015/09/read-piaware-flight-data-with-python.html) I created to produce a pretty swanky, even if I say so myself, radar of all the aircraft I am picking up signals from.
+I plugged in the GPS coordinates of the aircraft using the [PiAware flight data class](/posts/read-piaware-flight-data-with-python/) I created to produce a pretty swanky, even if I say so myself, radar of all the aircraft I am picking up signals from.
 
 **Setup PiAware**
  If you want to have a go, first you need to setup a [PiAware](https://uk.flightaware.com/adsb/piaware/) server to receive data - you don't need a lot of equipment and its really easy to do.

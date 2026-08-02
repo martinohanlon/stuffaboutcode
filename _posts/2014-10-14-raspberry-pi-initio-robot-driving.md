@@ -6,7 +6,7 @@ redirect_from:
   - /2014/10/raspberry-pi-initio-robot-driving.html
 ---
 
-I've been continuing my Raspberry Pi Robot project (see previous [post](http://www.stuffaboutcode.com/2014/08/raspberry-pi-initio-robot-python-motor.html)) and the next challenge was to create some functions to allow my robot to be autonomous.
+I've been continuing my Raspberry Pi Robot project (see previous [post](/posts/raspberry-pi-initio-robot-python-motor/)) and the next challenge was to create some functions to allow my robot to be autonomous.
 
 First challenge... Drive in a straight line! Not as easy as it seems. You put both motors onto 100% power forward and it veers slightly to the right (or in my case it does!). The reason is simple the motors which drive the left and right wheels don't turn at exactly the same rate.
 

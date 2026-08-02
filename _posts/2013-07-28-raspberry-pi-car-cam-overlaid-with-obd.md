@@ -8,7 +8,7 @@ redirect_from:
 
 I like motorsport and love driving my car around race tracks, the only problem is when you capture this on film, using a dashcam or similar, it looks rubbish! I wanted to add some data about what was going on.
 
-I recently blogged about how to use a [raspberry pi to read car diagnostics data](http://www.stuffaboutcode.com/2013/07/raspberry-pi-reading-car-obd-ii-data.html), I modified this program to log the data to a file, I then went for a drive around [Castle Combe](http://castlecombecircuit.co.uk/) racetrack using the raspberry pi camera board to capture HD video alongside the OBD-II diagnostics data from the car
+I recently blogged about how to use a [raspberry pi to read car diagnostics data](/posts/raspberry-pi-reading-car-obd-ii-data/), I modified this program to log the data to a file, I then went for a drive around [Castle Combe](http://castlecombecircuit.co.uk/) racetrack using the raspberry pi camera board to capture HD video alongside the OBD-II diagnostics data from the car
 
 I then created a program which converted the OBD-II data into a subtitle file and used mencoder to overlay the data (RPM, MPH, Temperature & Throttle position) as subtitles on top of the video.
 

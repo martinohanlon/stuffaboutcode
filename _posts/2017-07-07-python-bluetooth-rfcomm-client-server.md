@@ -6,7 +6,7 @@ redirect_from:
   - /2017/07/python-bluetooth-rfcomm-client-server.html
 ---
 
-As part of the [Blue Dot](http://www.stuffaboutcode.com/2017/04/bluedot-bluetooth-remote-for-raspberry.html) project I needed to create a simple Bluetooth client / server library so that the communication could be managed. This library, [btcomm](http://bluedot.readthedocs.io/en/latest/btcommapi.html), is part of bluedot but its not exclusive and can be used for Bluetooth communication in Python.
+As part of the [Blue Dot](/posts/bluedot-bluetooth-remote-for-raspberry/) project I needed to create a simple Bluetooth client / server library so that the communication could be managed. This library, [btcomm](http://bluedot.readthedocs.io/en/latest/btcommapi.html), is part of bluedot but its not exclusive and can be used for Bluetooth communication in Python.
 
 It uses a 2 way RFCOMM communication - you can send messages to and from 2 devices, 1 being the server which waits for connections, 1 being the client which makes a connection.
 

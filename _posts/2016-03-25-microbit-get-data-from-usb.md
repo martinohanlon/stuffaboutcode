@@ -6,7 +6,7 @@ redirect_from:
   - /2016/03/microbit-get-data-from-usb.html
 ---
 
-As part of my [Minecraft, a Microbit and an X-Wing](http://www.stuffaboutcode.com/2015/12/minecraft-microbit-and-x-wing.html) project, I used the USB to read data from the Microbit's accelerometer and buttons to make the X-Wing move.
+As part of my [Minecraft, a Microbit and an X-Wing](/posts/minecraft-microbit-and-x-wing/) project, I used the USB to read data from the Microbit's accelerometer and buttons to make the X-Wing move.
 
 [@NCSComputing](https://www.blogger.com/) on twitter has started re-using the code to make other things happen, so thought it would be a good idea to write up how it works, so others can do the same.
 

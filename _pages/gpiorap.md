@@ -5,7 +5,7 @@ redirect_from:
   - /p/gpiorap.html
 ---
 
-Whilst building a few apps that use the Raspberry Pi's GPIO, see my [previous post](http://www.stuffaboutcode.com/2012/11/raspberry-pi-getting-led-to-flash.html) about [getting an led to flash](http://www.stuffaboutcode.com/2012/11/raspberry-pi-getting-led-to-flash.html),I kept getting frustrated with **writing the same code over and over again**, like:
+Whilst building a few apps that use the Raspberry Pi's GPIO, see my [previous post](/posts/raspberry-pi-getting-led-to-flash/) about [getting an led to flash](/posts/raspberry-pi-getting-led-to-flash/),I kept getting frustrated with **writing the same code over and over again**, like:
 
 - turning an led on
 - toggling an led from on to off or vice versa
@@ -62,7 +62,7 @@ git clone https://github.com/martinohanlon/gpioRap.git
 ```
 
 ***Install distribute***
- If you have never installed python modules before you are going to need to install the python setuptools module (aka distribute), see blog post, [python - installing modules](http://www.stuffaboutcode.com/2012/10/raspberry-pi-python-installing-modules.html), for info on how to do this.
+ If you have never installed python modules before you are going to need to install the python setuptools module (aka distribute), see blog post, [python - installing modules](/posts/raspberry-pi-python-installing-modules/), for info on how to do this.
 
 ***Install the module***
 

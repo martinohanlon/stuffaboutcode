@@ -10,7 +10,7 @@ redirect_from:
 
 I used ntoll's [upyed](https://github.com/ntoll/upyed) website to create my code and download the .hex file which I uploaded to the Microbit.
 
-After a few tests to see if everything was working I decided to see if I could port the code I wrote to make [Snake for Minecraft](http://www.stuffaboutcode.com/2013/03/raspberry-pi-minecraft-snake.html) and [Raspberry Pi Sense Hat](http://www.stuffaboutcode.com/2015/06/astro-pi-snake-game.html).
+After a few tests to see if everything was working I decided to see if I could port the code I wrote to make [Snake for Minecraft](/posts/raspberry-pi-minecraft-snake/) and [Raspberry Pi Sense Hat](/posts/astro-pi-snake-game/).
 
 {% include youtube.html id="R1DOIxkGSwg" %}
 

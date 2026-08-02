@@ -8,7 +8,7 @@ redirect_from:
 
 ![](/assets/img/2013/01/minecraft-hc.png)
 
-Ive been playing around with the [pre-release of minecraft](http://www.stuffaboutcode.com/2013/01/raspberry-pi-install-minecraft-leaked.html) on the Raspberry Pi and in particular the API, see this [post](http://www.stuffaboutcode.com/2013/01/raspberry-pi-minecraft-api-basics.html) for some [background on the basics](http://www.stuffaboutcode.com/2013/01/raspberry-pi-minecraft-api-basics.html), and rather than watching 'Food Inspectors' on the tv, I thought I would see if I could write a game in minecraft (a game in a game I suppose) in an hour. This is what I came up with....
+Ive been playing around with the [pre-release of minecraft](/posts/raspberry-pi-install-minecraft-leaked/) on the Raspberry Pi and in particular the API, see this [post](/posts/raspberry-pi-minecraft-api-basics/) for some [background on the basics](/posts/raspberry-pi-minecraft-api-basics/), and rather than watching 'Food Inspectors' on the tv, I thought I would see if I could write a game in minecraft (a game in a game I suppose) in an hour. This is what I came up with....
 
 Minecraft - Hide and Seek!
 

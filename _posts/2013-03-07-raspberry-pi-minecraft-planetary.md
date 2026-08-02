@@ -6,7 +6,7 @@ redirect_from:
   - /2013/03/raspberry-pi-minecraft-planetary.html
 ---
 
-![](/assets/img/2013/03/sam_0838.jpg)First off I cant take the credit for this, I came across this great [post](http://users.softlab.ntua.gr/~ttsiod/gravityRK4.html) and [video](http://youtu.be/a6oAkSVHg7Y) titled "[A naive simulator of gravity, written in Python](http://users.softlab.ntua.gr/~ttsiod/gravityRK4.html)" by a guy called [Thanassis Tsiodras](https://plus.google.com/100429936881221995531) which describes and provides the code for a planetary gravity simulator, and I 're-used' the code, changing a few bits to migrate this to use the [minecraft api](http://www.stuffaboutcode.com/p/minecraft.html).
+![](/assets/img/2013/03/sam_0838.jpg)First off I cant take the credit for this, I came across this great [post](http://users.softlab.ntua.gr/~ttsiod/gravityRK4.html) and [video](http://youtu.be/a6oAkSVHg7Y) titled "[A naive simulator of gravity, written in Python](http://users.softlab.ntua.gr/~ttsiod/gravityRK4.html)" by a guy called [Thanassis Tsiodras](https://plus.google.com/100429936881221995531) which describes and provides the code for a planetary gravity simulator, and I 're-used' the code, changing a few bits to migrate this to use the [minecraft api](/minecraft/).
 
 I don't have a complete grasp of all the code (maths has never been my strong point), but I managed to reverse engineer Thanassis's code to understand what I needed to change to 'downsize' the universe so it could be rendered within the Minecraft world.
 

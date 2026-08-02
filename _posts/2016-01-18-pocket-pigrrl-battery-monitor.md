@@ -41,7 +41,7 @@ You will need a few parts:
 - 47k resistor
 - Strip board
 
-*Note - if you are doing this on a PiGRRL 2 with a Pi 3, be sure to check out Christian's comments about the [pin to use](http://www.stuffaboutcode.com/2016/01/pocket-pigrrl-battery-monitor.html?showComment=1473048626905#c1441985850678463142) and [wiring-pi install](http://www.stuffaboutcode.com/2016/01/pocket-pigrrl-battery-monitor.html?showComment=1472960188243#c2350592785972375454) before starting.*
+*Note - if you are doing this on a PiGRRL 2 with a Pi 3, be sure to check out Christian's comments about the [pin to use](/posts/pocket-pigrrl-battery-monitor/) and [wiring-pi install](/posts/pocket-pigrrl-battery-monitor/) before starting.*
 
 1. Open up your Pi GRRL and connect a small length of wire to the red (low power) led on the power booster.
 
@@ -63,7 +63,7 @@ You will need a few parts:
 
 ![](/assets/img/2016/01/soldertopi2.jpg)
 
-*The yellow wire is for my [mute / un-mute amp function](http://www.stuffaboutcode.com/2016/01/pocket-pigrrl-adding-mute.html).*
+*The yellow wire is for my [mute / un-mute amp function](/posts/pocket-pigrrl-adding-mute/).*
 
 4, Solder the wire from the low power (red) led to the strip board.
 

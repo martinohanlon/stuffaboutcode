@@ -38,7 +38,7 @@ I decided on [Volumio](https://volumio.org/) as the music player, which is a ver
 
 ![](/assets/img/2015/05/screenshot_2015-05-18-14-50-49.png)
 
-As volumio is built on top of MPD I could use the [python-mpd2](https://github.com/Mic92/python-mpd2) module for interfacing with it - see my blog post [Volumio, MPD & Python](http://www.stuffaboutcode.com/2015/04/python-mpd-and-volumio.html) for an overview of how this works.
+As volumio is built on top of MPD I could use the [python-mpd2](https://github.com/Mic92/python-mpd2) module for interfacing with it - see my blog post [Volumio, MPD & Python](/posts/python-mpd-and-volumio/) for an overview of how this works.
 
 **Lady Anne's Hardware**
 
@@ -62,7 +62,7 @@ Much testing was done with a multimeter to work out what each of the terminals o
 
 The switch is actually many switches and when I connected a current to it, I was also surprised to see that it also wasn't digital, it simply leaks current, off is anywhere between 0v - 1.5v and this totally messes up the Raspberry Pi's GPIO pins.
 
-As I needed an ADC (Analogue to Digital Converter) to read the value from the potentiometer I came up with the concept of an 'analogue' switch and used an MCP3008 ADC to read the values from the switch and when it was above certain voltage I considered it to be on, below it was off - see my blog post [Raspberry Pi, MCP3008 ADC & Python](http://www.stuffaboutcode.com/2015/04/raspberry-pi-mcp3008-adc-python.html) for an overview of using the MCP3008 ADC.
+As I needed an ADC (Analogue to Digital Converter) to read the value from the potentiometer I came up with the concept of an 'analogue' switch and used an MCP3008 ADC to read the values from the switch and when it was above certain voltage I considered it to be on, below it was off - see my blog post [Raspberry Pi, MCP3008 ADC & Python](/posts/raspberry-pi-mcp3008-adc-python/) for an overview of using the MCP3008 ADC.
 
 ![](/assets/img/2015/05/img_20150406_093636146.jpg)
 
@@ -72,7 +72,7 @@ A few emails to IQAudio suggested that while the pins weren't connected, they co
 
 ![](/assets/img/2015/05/img_20150412_160030895_hdr.jpg)
 
-The last piece of hardware I needed was a rotary encoder which would fit under the tuning wheel and skip tracks - see my post [Raspberry Pi and KY040 Rotary Encoder](http://www.stuffaboutcode.com/2015/05/raspberry-pi-and-ky040-rotary-encoder.html) for an overview on how to use one.
+The last piece of hardware I needed was a rotary encoder which would fit under the tuning wheel and skip tracks - see my post [Raspberry Pi and KY040 Rotary Encoder](/posts/raspberry-pi-and-ky040-rotary-encoder/) for an overview on how to use one.
 
 ![](/assets/img/2015/05/ky040.jpg)
 

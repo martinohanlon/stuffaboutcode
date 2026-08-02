@@ -66,6 +66,6 @@ If everything has gone to plan you should see a message when you start up Canary
 
 ![](/assets/img/2014/10/canarymodstartup.png)
 
-You can now run your Minecraft: Pi Edition programs on the full version of Minecraft. Here is a video of the [Minecraft Analogue Clock](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-analogue-clock.html) running on Bukkit using Raspberry Juice.
+You can now run your Minecraft: Pi Edition programs on the full version of Minecraft. Here is a video of the [Minecraft Analogue Clock](/posts/raspberry-pi-minecraft-analogue-clock/) running on Bukkit using Raspberry Juice.
 
 {% include youtube.html id="Iq7fCTaJd1U" %}

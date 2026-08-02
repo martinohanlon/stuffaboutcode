@@ -133,4 +133,4 @@ python createRSSFeed.py /path/to/media/files /path/to/output/RSSFile.rss
 
 Update - I came across some problems when there was escape characters in the xml, so had to write a function to [encode text to make it xml safe](http://stuffaboutcode.blogspot.co.uk/2012/06/python-encode-xml-escape-characters.html).
 
-Update - Dan Goff sent me on a [modified version of this program](http://www.stuffaboutcode.com/2012/09/python-create-rss-podcast-of-mp3-files.html) which uses the mutagen library to include data from ID3 tags in mp3 files
+Update - Dan Goff sent me on a [modified version of this program](/posts/python-create-rss-podcast-of-mp3-files/) which uses the mutagen library to include data from ID3 tags in mp3 files

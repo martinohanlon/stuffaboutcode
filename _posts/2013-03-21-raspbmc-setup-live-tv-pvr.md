@@ -66,7 +66,7 @@ Enable the adapter by ticking the "Enabled" box and clicking Save.
 
 ![](/assets/img/2013/03/tvheadendenableadapter.png)
 
-You need to configure TvHeadend with the correct multiplexes for your TV transmitter, if your lucky you may be able to pick your transmitter from the list by using "Add DVB Network by Location", then waiting for "Muxes awaiting initial scan" to reach zero, if however after this the number of services you have got is 0, you are going to have to [setup the muxes manually](http://www.stuffaboutcode.com/2012/12/tvheadend-no-services-found-setting-up.html) see this [post](http://www.stuffaboutcode.com/2012/12/tvheadend-no-services-found-setting-up.html) for a how-to. This is because the config files distributed with TvHeadend are out of date.
+You need to configure TvHeadend with the correct multiplexes for your TV transmitter, if your lucky you may be able to pick your transmitter from the list by using "Add DVB Network by Location", then waiting for "Muxes awaiting initial scan" to reach zero, if however after this the number of services you have got is 0, you are going to have to [setup the muxes manually](/posts/tvheadend-no-services-found-setting-up/) see this [post](/posts/tvheadend-no-services-found-setting-up/) for a how-to. This is because the config files distributed with TvHeadend are out of date.
 
 Once you have a number of services found, click "Map DVB Services to Channels".
 

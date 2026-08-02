@@ -32,7 +32,7 @@ The following is an example based on starting up the no-ip service \[/usr/local/
 # Description:       A simple script from
 ```
 
-[`www.stuffaboutcode.com`](http://www.stuffaboutcode.com/)
+[`www.stuffaboutcode.com`](/)
 
 ```bash
  which will start / stop a program a boot / shutdown.

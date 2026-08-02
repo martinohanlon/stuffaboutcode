@@ -12,7 +12,7 @@ Being notoriously tight I opted for the VERY cheap KY040 (Amazon [UK](http://www
 
 ![](/assets/img/2015/05/ky040-2.jpg)
 
-[Stock picture not released under creative commons.](http://www.stuffaboutcode.com/p/about.html)
+[Stock picture not released under creative commons.](/about/)
 
 The KY040 has 5 pins:
 

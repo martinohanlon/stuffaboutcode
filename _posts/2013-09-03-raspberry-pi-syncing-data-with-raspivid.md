@@ -6,7 +6,7 @@ redirect_from:
   - /2013/09/raspberry-pi-syncing-data-with-raspivid.html
 ---
 
-Since I used a [Raspberry Pi to capture video and data from my car and then overlay the data](http://www.stuffaboutcode.com/2013/07/raspberry-pi-car-cam-overlaid-with-obd.html) onto the video, I've been looking for an easier way of synchronising data with video, simply put "Its was a right pain in the bum".
+Since I used a [Raspberry Pi to capture video and data from my car and then overlay the data](/posts/raspberry-pi-car-cam-overlaid-with-obd/) onto the video, I've been looking for an easier way of synchronising data with video, simply put "Its was a right pain in the bum".
 
 It was difficult because while you can note the time the data was captured, you don't know what the 'time' will be in the video because you get drift (e.g. if you specify 30 frames a second, it isn't always 'exactly' 30 frames a second, sometimes its more, sometimes its less, sometimes frames are dropped) and the longer the video the more 'drift'.
 
@@ -34,7 +34,7 @@ cd ~/code
 git clone git://github.com/martinohanlon/userland.git
 ```
 
-See this [post](http://www.stuffaboutcode.com/2013/08/compile-raspberry-pi-userland-raspivid.html) to on [how to compile userland](http://www.stuffaboutcode.com/2013/08/compile-raspberry-pi-userland-raspivid.html), if you want to keep the original raspivid software (probably a good idea!), dont run the command sudo make install.
+See this [post](/posts/compile-raspberry-pi-userland-raspivid/) to on [how to compile userland](/posts/compile-raspberry-pi-userland-raspivid/), if you want to keep the original raspivid software (probably a good idea!), dont run the command sudo make install.
 
 My custom raspivid program will be compiled in the
 

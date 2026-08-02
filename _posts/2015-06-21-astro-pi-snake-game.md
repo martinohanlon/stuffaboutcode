@@ -14,7 +14,7 @@ Anyone budding coders up for the challenge?
 
 {% include youtube.html id="bphHhwkBG7I" %}
 
-I started with the code I originally wrote for [Minecraft - Snake](http://www.stuffaboutcode.com/2013/03/raspberry-pi-minecraft-snake.html) and made the changes so that rather than creating blocks in Minecraft it turned on leds and used the joystick to control the motion. I was also surprised by how much I improved the overall structure of the code, it wasn't poorly coded it was just a bit untidy.
+I started with the code I originally wrote for [Minecraft - Snake](/posts/raspberry-pi-minecraft-snake/) and made the changes so that rather than creating blocks in Minecraft it turned on leds and used the joystick to control the motion. I was also surprised by how much I improved the overall structure of the code, it wasn't poorly coded it was just a bit untidy.
 
 To try it yourself, get the code from [github.com/martinohanlon/AstroPiSnake](https://github.com/martinohanlon/AstroPiSnake) and run it, by opening a terminal and using the commands:
 

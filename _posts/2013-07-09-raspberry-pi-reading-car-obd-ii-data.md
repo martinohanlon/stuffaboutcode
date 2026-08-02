@@ -12,7 +12,7 @@ I read about a guy called salgar on [pistonheads.com](http://pistonheads.com/) w
 
 [OBD](http://en.wikipedia.org/wiki/On-board_diagnostics) or On Board Diagnostics and OBD-II is a standard for communicating and reading data from a car, its standard across most modern cars and the likelihood is you have a connector in your car which you can read all sorts of data about the car such as RPM, Speed, Temperature and a million other things you wouldn't guess a car was monitoring.
 
-*Update - I've taken this prototype to the next stage and used the [OBD data to overlay mph, rpm, temperature and throttle position over video taken with the camera board](http://www.stuffaboutcode.com/2013/07/raspberry-pi-car-cam-overlaid-with-obd.html).*
+*Update - I've taken this prototype to the next stage and used the [OBD data to overlay mph, rpm, temperature and throttle position over video taken with the camera board](/posts/raspberry-pi-car-cam-overlaid-with-obd/).*
 
 {% include youtube.html id="5EPRbiP9uTw" %}
 

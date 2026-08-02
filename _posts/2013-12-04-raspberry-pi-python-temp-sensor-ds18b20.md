@@ -59,7 +59,7 @@ The first line tells us whether the data read was successful with YES.
 The temperature is returned in 1000's of a degress so 24437 is 24.437 centigrade.
 
 **Python program**
- I created a python module which would periodically sample the temperature from the sensor and allow a calling program to read the temperature from module as and when required, similar to the module I wrote for [reading GPS data](http://www.stuffaboutcode.com/2013/09/raspberry-pi-gps-setup-and-python.html).
+ I created a python module which would periodically sample the temperature from the sensor and allow a calling program to read the temperature from module as and when required, similar to the module I wrote for [reading GPS data](/posts/raspberry-pi-gps-setup-and-python/).
 
 There is a more complete example of how to use the module in the code below but simply you use it like this:
 

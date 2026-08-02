@@ -16,7 +16,7 @@ The code is relatively simple, the program continually monitors the position of 
 
 [http://youtu.be/m8yaLR0ju4Y](http://youtu.be/m8yaLR0ju4Y)
 
-This is based on the version 0.1.1 of Minecraft: Pi edition, see this [post](http://www.stuffaboutcode.com/2013/01/raspberry-pi-install-minecraft-leaked.html) for info on [how to install](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-install.html).
+This is based on the version 0.1.1 of Minecraft: Pi edition, see this [post](/posts/raspberry-pi-install-minecraft-leaked/) for info on [how to install](/posts/raspberry-pi-minecraft-install/).
 
 **Download and run**
  You can download the code direct from [git-hub](https://github.com/martinohanlon/minecraft-bridge.git), so run minecraft, open/create a world and follow the instructions:

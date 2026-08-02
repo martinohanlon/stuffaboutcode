@@ -6,7 +6,7 @@ redirect_from:
   - /2012/12/tvheadend-no-services-found-setting-up.html
 ---
 
-Anyway, I found an old usb tv tuner and I decided to see if I could get my raspberry pi running [raspbmc](http://www.raspbmc.com/) to show live TV, it turned out that configuring Tvheadend was a lot more complicated than I expected. Follow this [tutorial](http://www.stuffaboutcode.com/2013/03/raspbmc-setup-live-tv-pvr.html) to setting up live tv on raspbmc.
+Anyway, I found an old usb tv tuner and I decided to see if I could get my raspberry pi running [raspbmc](http://www.raspbmc.com/) to show live TV, it turned out that configuring Tvheadend was a lot more complicated than I expected. Follow this [tutorial](/posts/raspbmc-setup-live-tv-pvr/) to setting up live tv on raspbmc.
 
 Once the tv tuner is setup and appears in the devices list in TV adapters in the Configuration menu on tvheadend you should be able to use the "Add DVB services by location", but I found that when I picked my transmitter it would scan the muxes but would not find any services.
 

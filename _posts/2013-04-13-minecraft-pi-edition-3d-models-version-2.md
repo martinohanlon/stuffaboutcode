@@ -6,7 +6,7 @@ redirect_from:
   - /2013/04/minecraft-pi-edition-3d-models-version-2.html
 ---
 
-I created a program, which using the Minecraft: Pi Edition API, takes [3d models and creates them in Minecraft](http://www.stuffaboutcode.com/2013/03/minecraft-pi-edition-create-massive-3d.html), but version 1 only created the models as wire-frames and only in one block.
+I created a program, which using the Minecraft: Pi Edition API, takes [3d models and creates them in Minecraft](/posts/minecraft-pi-edition-create-massive-3d/), but version 1 only created the models as wire-frames and only in one block.
 
 Version 2 is now out which uses the same concept of taking a 3d model as an [obj file](http://en.wikipedia.org/wiki/Wavefront_.obj_file) and using the api to render it in Minecraft but it now draw's complete polygons rather than wire-frames and gives the ability to specify a minecraft block for each material, allowing models to be created completely and in 'colour'.
 

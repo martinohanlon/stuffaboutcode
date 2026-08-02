@@ -6,9 +6,9 @@ redirect_from:
   - /2017/01/raspberry-pi-4-digit-7-segment-display.html
 ---
 
-I recently picked up some '[retro 4 digit LED displays](https://shop.pimoroni.com/products/retro-4-digit-led-display)' from [pimoroni](https://www.pimoroni.com/), noticing there was no support in [gpiozero](http://gpiozero.readthedocs.io/) for 7 segment displays (either [single](http://www.stuffaboutcode.com/2016/10/raspberry-pi-7-segment-display-gpiozero.html) or multi digit) I decided to add them and create a [pull request](https://github.com/RPi-Distro/python-gpiozero/pull/488).
+I recently picked up some '[retro 4 digit LED displays](https://shop.pimoroni.com/products/retro-4-digit-led-display)' from [pimoroni](https://www.pimoroni.com/), noticing there was no support in [gpiozero](http://gpiozero.readthedocs.io/) for 7 segment displays (either [single](/posts/raspberry-pi-7-segment-display-gpiozero/) or multi digit) I decided to add them and create a [pull request](https://github.com/RPi-Distro/python-gpiozero/pull/488).
 
-This builds on the code I created for driving [single 7 segment displays](http://www.stuffaboutcode.com/2016/10/raspberry-pi-7-segment-display-gpiozero.html).
+This builds on the code I created for driving [single 7 segment displays](/posts/raspberry-pi-7-segment-display-gpiozero/).
 
 ![](/assets/img/2017/01/7seg_leds.png)
 

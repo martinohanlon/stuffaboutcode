@@ -6,7 +6,7 @@ redirect_from:
   - /2013/04/raspberry-pi-minecraft-cannon.html
 ---
 
-![](/assets/img/2013/04/minecraftcannon-2.jpg)I had this idea about using [Minecraft: Pi Edition and its API](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html) to show how trigonometry, [mechanics](http://en.wikipedia.org/wiki/Mechanics) and mathematics can actually be useful and given that everyone likes to blow stuff up.... I thought I would make a cannon.
+![](/assets/img/2013/04/minecraftcannon-2.jpg)I had this idea about using [Minecraft: Pi Edition and its API](/posts/minecraft-pi-edition-api-tutorial/) to show how trigonometry, [mechanics](http://en.wikipedia.org/wiki/Mechanics) and mathematics can actually be useful and given that everyone likes to blow stuff up.... I thought I would make a cannon.
 
 A cannon which could point in any direction (0-360 degrees), angle upwards (0-90 degrees) and when fired would send a cannon ball upwards, falling in-line with the laws of gravity and then explode when it hit the ground.
 

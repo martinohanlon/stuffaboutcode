@@ -24,7 +24,7 @@ The time is then updated by clearing the previous hand by drawing the previous l
 
 [http://youtu.be/ey4QpoqZLLU](http://youtu.be/ey4QpoqZLLU)
 
-If you want know more about the minecraft api and a rather gentler introduction, check out this post, [Raspberry Pi - Minecraft API - the basics](http://www.stuffaboutcode.com/2013/01/raspberry-pi-minecraft-api-basics.html).
+If you want know more about the minecraft api and a rather gentler introduction, check out this post, [Raspberry Pi - Minecraft API - the basics](/posts/raspberry-pi-minecraft-api-basics/).
 
 **Download and run**
  You can download the code direct from [git-hub](https://github.com/martinohanlon/minecraft-clock.git), so run minecraft, open/create a world and follow the instructions:

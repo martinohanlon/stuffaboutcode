@@ -6,7 +6,7 @@ redirect_from:
   - /2016/11/compile-allegro-5x-for-raspberry-pi.html
 ---
 
-I am in the process of porting [Mayhem 2](http://www.stuffaboutcode.com/2016/06/mayhem-2-open-source-cave-shooter.html) to Allegro 5 (with the help of [Jonas Karlsson](https://github.com/karjonas)), and wanted to compile the latest version of Allegro on the Pi, as only an older version is available through apt.
+I am in the process of porting [Mayhem 2](/posts/mayhem-2-open-source-cave-shooter/) to Allegro 5 (with the help of [Jonas Karlsson](https://github.com/karjonas)), and wanted to compile the latest version of Allegro on the Pi, as only an older version is available through apt.
 **Install the dependencies**
 
 ```bash

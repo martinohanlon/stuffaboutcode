@@ -6,7 +6,7 @@ redirect_from:
   - /2013/11/coding-shapes-in-minecraft.html
 ---
 
-![](/assets/img/2013/11/2013-11-21_22.17.38.jpg)Over the past 10 months or so, I have created quite a few [minecraft projects](http://www.stuffaboutcode.com/p/minecraft.html) and in doing so I have also created quite a few functions which I thought other people might find useful. To make it easier to use these functions, I thought I would create an extension module for the Minecraft: Pi edition api. I couldn't think of a good name for it, so its just minecraftstuff.
+![](/assets/img/2013/11/2013-11-21_22.17.38.jpg)Over the past 10 months or so, I have created quite a few [minecraft projects](/minecraft/) and in doing so I have also created quite a few functions which I thought other people might find useful. To make it easier to use these functions, I thought I would create an extension module for the Minecraft: Pi edition api. I couldn't think of a good name for it, so its just minecraftstuff.
 
 The first class I have included in minecraftstuff is MinecraftDrawing which allows you to easily create 2d and 3d lines and shapes in minecraft. I will add other 'stuff' to the extension over time.
 

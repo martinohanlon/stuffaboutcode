@@ -6,7 +6,7 @@ redirect_from:
   - /2013/04/minecraft-pi-edition-api-tutorial.html
 ---
 
-This tutorial started off as an article I wrote on Minecraft: Pi Edition for the [Issue 11 of The Mag Pi](http://www.themagpi.com/en/issue/11), a magazine written by Raspberry Pi enthusiasts, and builds on my first post [Raspberry Pi - Minecraft - API Basics](http://www.stuffaboutcode.com/2013/01/raspberry-pi-minecraft-api-basics.html), which describes the basics of how to use the API. I highly recommend you give [The Mag Pi](http://www.themagpi.com/) a go, its always full of interesting and relevant articles.
+This tutorial started off as an article I wrote on Minecraft: Pi Edition for the [Issue 11 of The Mag Pi](http://www.themagpi.com/en/issue/11), a magazine written by Raspberry Pi enthusiasts, and builds on my first post [Raspberry Pi - Minecraft - API Basics](/posts/raspberry-pi-minecraft-api-basics/), which describes the basics of how to use the API. I highly recommend you give [The Mag Pi](http://www.themagpi.com/) a go, its always full of interesting and relevant articles.
 
 ![](/assets/img/2013/04/minecraft-2.jpg)
 
@@ -14,19 +14,19 @@ This tutorial started off as an article I wrote on Minecraft: Pi Edition for the
  If Minecraft: Pi edition isn't already installed on your Pi, head over to [www.raspberrypi.org/documentation/usage/minecraft](http://www.raspberrypi.org/documentation/usage/minecraft/) and follow the instructions.
 
 **The API**
- The API allows you to write programs which control, alter and interact with the minecraft world, unlocking a whole load of minecraft hacking. How about [creating massive structures at the click of a button](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-3d-models-version-2.html) or a [bridge which automatically appears under your feet](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-auto-bridge.html) allowing you to walk across massive chasms or a game of minesweeper, a [huge real time clock](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-analogue-clock.html), a [programmable directional cannon](http://www.stuffaboutcode.com/2013/04/raspberry-pi-minecraft-cannon.html), [turn blocks into bombs](http://www.stuffaboutcode.com/2013/05/raspberry-pi-minecraft-block-events.html) or the game [snake](http://www.stuffaboutcode.com/2013/03/raspberry-pi-minecraft-snake.html)?
+ The API allows you to write programs which control, alter and interact with the minecraft world, unlocking a whole load of minecraft hacking. How about [creating massive structures at the click of a button](/posts/minecraft-pi-edition-3d-models-version-2/) or a [bridge which automatically appears under your feet](/posts/raspberry-pi-minecraft-auto-bridge/) allowing you to walk across massive chasms or a game of minesweeper, a [huge real time clock](/posts/raspberry-pi-minecraft-analogue-clock/), a [programmable directional cannon](/posts/raspberry-pi-minecraft-cannon/), [turn blocks into bombs](/posts/raspberry-pi-minecraft-block-events/) or the game [snake](/posts/raspberry-pi-minecraft-snake/)?
 
 ![](/assets/img/2013/04/minecraft-clock.jpg)
 
-[Massive Analogue Clock](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-analogue-clock.html)
+[Massive Analogue Clock](/posts/raspberry-pi-minecraft-analogue-clock/)
 
 ![](/assets/img/2013/04/minecraftcannon.jpg)
 
-[Directional Cannon](http://www.stuffaboutcode.com/2013/04/raspberry-pi-minecraft-cannon.html)
+[Directional Cannon](/posts/raspberry-pi-minecraft-cannon/)
 
 ![](/assets/img/2013/04/minecraft-snake.jpg)
 
-[Snake](http://www.stuffaboutcode.com/2013/03/raspberry-pi-minecraft-snake.html)
+[Snake](/posts/raspberry-pi-minecraft-snake/)
 
 Minecraft is a world of cubes or blocks, all with a relative size of 1m x 1m x 1m, and every block has a position in the world of x, y, z; x and z being the horizontal positions and y being the vertical.
 
@@ -147,4 +147,4 @@ There are a few other functions available in the api which should be explored bu
 
 I love minecraft, its a tremendously creative game and with the Pi edition’s API it opens up new level of creativity and will hopefully encourage more people to try their hand at programming.
 
-If you want to see more examples of what I have done with Minecraft: Pi edition (e.g. a [massive analogue clock](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-analogue-clock.html), the [game of snake](http://www.stuffaboutcode.com/2013/03/raspberry-pi-minecraft-snake.html), an [auto bridge](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-auto-bridge.html) which appears under your feet or the whole of [Manhattan](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-manhattan-stroll.html)) head over to my [Minecraft page](http://www.stuffaboutcode.com/p/minecraft.html).
+If you want to see more examples of what I have done with Minecraft: Pi edition (e.g. a [massive analogue clock](/posts/raspberry-pi-minecraft-analogue-clock/), the [game of snake](/posts/raspberry-pi-minecraft-snake/), an [auto bridge](/posts/raspberry-pi-minecraft-auto-bridge/) which appears under your feet or the whole of [Manhattan](/posts/minecraft-pi-edition-manhattan-stroll/)) head over to my [Minecraft page](/minecraft/).

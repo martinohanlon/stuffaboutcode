@@ -71,7 +71,7 @@ command is then run with the following options:
 - `2>&1` - tells the command to log errors to camera.log
 - `&` - tells the command to run in the background
 
-An init.d script is then used to make this run at start-up. If you want more information about running commands at start-up on the Pi, see [Rasberry Pi - Running programs at start-up](http://www.stuffaboutcode.com/2012/06/raspberry-pi-run-program-at-start-up.html).
+An init.d script is then used to make this run at start-up. If you want more information about running commands at start-up on the Pi, see [Rasberry Pi - Running programs at start-up](/posts/raspberry-pi-run-program-at-start-up/).
 
 ***Make script executable***
 

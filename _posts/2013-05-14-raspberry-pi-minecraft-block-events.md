@@ -6,11 +6,11 @@ redirect_from:
   - /2013/05/raspberry-pi-minecraft-block-events.html
 ---
 
-Up to now I hadn't had a need to make use of the "Event" methods in Minecraft's API and I wanted to learn a little more about how it worked, so I could include some information in my [Minecraft API Tutorial](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html).
+Up to now I hadn't had a need to make use of the "Event" methods in Minecraft's API and I wanted to learn a little more about how it worked, so I could include some information in my [Minecraft API Tutorial](/posts/minecraft-pi-edition-api-tutorial/).
 
 ![](/assets/img/2013/05/sam_0879.jpg)I wanted to do something fun with it, so I decided to see if I could make some bombs! The concept is really simple, when you hit a block (right click with the sword), it turns it into a mini bomb, flashing for a few seconds, before exploding and destroying all the blocks around it. **Boom!**
 
-With this and the [programmable cannon](http://www.stuffaboutcode.com/2013/04/raspberry-pi-minecraft-cannon.html) I wrote, I'm really getting quite destructive.
+With this and the [programmable cannon](/posts/raspberry-pi-minecraft-cannon/) I wrote, I'm really getting quite destructive.
 
 {% include youtube.html id="ui-P9dSfboQ" %}
 

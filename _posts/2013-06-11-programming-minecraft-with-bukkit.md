@@ -50,7 +50,7 @@ If everything has gone to plan you should see a message when you start up bukkit
 
 Now, you can run the programs you created for Minecraft: Pi Edition on the full edition of Minecraft.
 
-[Minecraft Analogue Clock](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-analogue-clock.html) running using Bukkit and Raspberry Juice
+[Minecraft Analogue Clock](/posts/raspberry-pi-minecraft-analogue-clock/) running using Bukkit and Raspberry Juice
 
 {% include youtube.html id="Iq7fCTaJd1U" %}
 

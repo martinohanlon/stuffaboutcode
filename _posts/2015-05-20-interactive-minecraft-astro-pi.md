@@ -14,7 +14,7 @@ All of the components on the board are 'hitable' so when you right click them wh
 
 {% include youtube.html id="i4sAfVcE_9s" %}
 
-If you have got an Astro Pi board and haven't yet set it up take a look at my [Astro Pi - Getting Started Tutorial](http://www.stuffaboutcode.com/2015/05/astro-pi-getting-started.html).
+If you have got an Astro Pi board and haven't yet set it up take a look at my [Astro Pi - Getting Started Tutorial](/posts/astro-pi-getting-started/).
 
 Once your Astro Pi is up and running you can download the code from [github.com/martinohanlon/MinecraftInteractiveAstroPi](https://github.com/martinohanlon/MinecraftInteractiveAstroPi) and run it by opening a terminal and using the following commands:
 

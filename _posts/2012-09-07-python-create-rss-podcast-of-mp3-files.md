@@ -6,7 +6,7 @@ redirect_from:
   - /2012/09/python-create-rss-podcast-of-mp3-files.html
 ---
 
-Anyway, a nice guy called [Dan Goff](http://www.blogger.com/profile/14848795091299473717) left a comment on my post about creating a [RSS / podcast file using Python](http://www.stuffaboutcode.com/2012/06/raspberry-pi-python-create-podcast-rss.html) letting me know that he had taken my code template and modified it to use the Mutagen library to pick up certain values from the ID3 tags inside MP3 files.
+Anyway, a nice guy called [Dan Goff](http://www.blogger.com/profile/14848795091299473717) left a comment on my post about creating a [RSS / podcast file using Python](/posts/raspberry-pi-python-create-podcast-rss/) letting me know that he had taken my code template and modified it to use the Mutagen library to pick up certain values from the ID3 tags inside MP3 files.
 
 *Dan says:*
 

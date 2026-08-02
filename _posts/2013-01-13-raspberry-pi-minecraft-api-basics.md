@@ -6,7 +6,7 @@ redirect_from:
   - /2013/01/raspberry-pi-minecraft-api-basics.html
 ---
 
-Anyway, I've been exploring the API which comes with the new Pi edition of Minecraft. See [Raspberry Pi - Minecraft - Install](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-install.html) for details on how to install Minecraft: Pi Edition. If you want a more in-depth tutorial rather than just the basics, see my [Minecraft: Pi Edition - API Tutorial](http://www.stuffaboutcode.com/2013/04/minecraft-pi-edition-api-tutorial.html) post.
+Anyway, I've been exploring the API which comes with the new Pi edition of Minecraft. See [Raspberry Pi - Minecraft - Install](/posts/raspberry-pi-minecraft-install/) for details on how to install Minecraft: Pi Edition. If you want a more in-depth tutorial rather than just the basics, see my [Minecraft: Pi Edition - API Tutorial](/posts/minecraft-pi-edition-api-tutorial/) post.
 
 {% include youtube.html id="icrbqilD4Ng" %}
 
@@ -145,4 +145,4 @@ Change the send function and comment out the 2 print statements, so it looks lik
         self.socket.sendall(s)
 ```
 
-Check out my [minecraft posts](http://www.stuffaboutcode.com/p/minecraft.html), such as a game of [Hide and Seek in Minecraft](http://www.stuffaboutcode.com/2013/01/raspberry-pi-minecraft-hide-and-seek.html), an [Auto Bridge](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-auto-bridge.html), no matter where you walk a bridge will always be under your feet or a [Massive Analogue Clock](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-analogue-clock.html), big enough so you can walk on the arms.
+Check out my [minecraft posts](/minecraft/), such as a game of [Hide and Seek in Minecraft](/posts/raspberry-pi-minecraft-hide-and-seek/), an [Auto Bridge](/posts/raspberry-pi-minecraft-auto-bridge/), no matter where you walk a bridge will always be under your feet or a [Massive Analogue Clock](/posts/raspberry-pi-minecraft-analogue-clock/), big enough so you can walk on the arms.

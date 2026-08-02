@@ -10,7 +10,7 @@ I've been using the [PiAware](http://flightaware.com/adsb/piaware/) software to 
 
 ![](/assets/img/2015/10/12039693_10205647410799461_8669976234796368359_n.jpg)
 
-The first step was creating a way of [reading data from PiAware using Python 3](http://www.stuffaboutcode.com/2015/09/read-piaware-flight-data-with-python.html), so I created a module called [flightdata.py](http://www.stuffaboutcode.com/2015/09/read-piaware-flight-data-with-python.html).
+The first step was creating a way of [reading data from PiAware using Python 3](/posts/read-piaware-flight-data-with-python/), so I created a module called [flightdata.py](/posts/read-piaware-flight-data-with-python/).
 
 Once I had the data it was simply a case of looping through each of the aircraft signals found, calculating the distance between my gps co-ordinates and the gps position of the aircraft. If the distance was less than 10km I turned the led on!
 

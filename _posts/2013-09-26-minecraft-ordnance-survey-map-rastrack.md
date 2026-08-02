@@ -12,7 +12,7 @@ redirect_from:
 
 I noticed an [article](http://www.bbc.co.uk/news/technology-24177844) on BBC News reporting about Ordnance Survey (the key mapping company in the UK) had create a [Minecraft map of the whole of the UK](http://www.ordnancesurvey.co.uk/innovate/developers/minecraft-map-britain.html) based on their data.
 
-I downloaded the map and put in on [raspberry pi powered minecraft server](http://www.stuffaboutcode.com/2013/09/raspberry-pi-setup-minecraft-server.html) and tweeted a picture of it.
+I downloaded the map and put in on [raspberry pi powered minecraft server](/posts/raspberry-pi-setup-minecraft-server/) and tweeted a picture of it.
 
 David Whale (@whaleygeek) had an idea, use the data from Ryan Walmsley (@ryanteck)'s [rastrack.co.uk](http://rastrack.co.uk/) to show the Pi's of the UK in minecraft.
 
@@ -20,7 +20,7 @@ David Whale (@whaleygeek) had an idea, use the data from Ryan Walmsley (@ryantec
 
 It works like this:
 
-- I took the Minecraft map Ordnance Survey (OS) and put it on a [raspberry pi powered minecraft server](http://www.stuffaboutcode.com/2013/09/raspberry-pi-setup-minecraft-server.html)
+- I took the Minecraft map Ordnance Survey (OS) and put it on a [raspberry pi powered minecraft server](/posts/raspberry-pi-setup-minecraft-server/)
 - I got the locations of all the raspberry pi's logged on [http://rastrack.co.uk](http://rastrack.co.uk/) and parsed the data using python
 - I converted the latitude and longitude for each pi to OS grid reference, by making a call to a website created by David Whale [http://www.thinkingbinaries.com/test/gpsmap/geodesic.php5](http://www.thinkingbinaries.com/test/gpsmap/geodesic.php5), passing the lat and lon and parsing the returned grid reference
 - I converted the OS grid reference to minecraft location by porting the code in the converter page supplied by OS to python [http://oslabs.s3.amazonaws.com/convert.html](http://oslabs.s3.amazonaws.com/convert.html)
