@@ -1,11 +1,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{%- assign page_title = page.title | default: site.title -%}
-{%- if page.title -%}
-  <title>{{ page.title | strip_html }} · stuffaboutcode.com</title>
+{%- comment -%}
+The home page, its pager and every tag page are built from real index.html
+files, so page.url carries a trailing "index.html" -- which is a second,
+uglier URL for a page the server already answers at the directory. Left in, it
+disagrees with jekyll-sitemap, which trims it. Posts and _pages have pretty
+permalinks and pass through untouched.
+
+Computed up here because the title below needs it to recognise the home page.
+{%- endcomment -%}
+{%- assign self_url = page.url -%}
+{%- assign tail = self_url | slice: -10, 10 -%}
+{%- if tail == "index.html" -%}
+  {%- assign cut = self_url | size | minus: 10 -%}
+  {%- assign self_url = self_url | slice: 0, cut -%}
+{%- endif -%}
+
+{%- comment -%}
+Three traps here, all of which shipped a broken home page title.
+
+1. Escape the title, never strip_html it. The site title is <Stuff about="code"
+   />, which is tag-shaped, so strip_html deletes it outright and the home page
+   went out as " · stuffaboutcode.com".
+2. Do not rely on page.title being absent on the home page. jekyll-paginate-v2
+   supplies one for every paginated page, falling back to the site title, so
+   testing page.title alone never reaches the tagline branch.
+
+3. Match the home page on self_url, not page.url. page.url is "/index.html"
+   here, so a check against "/" silently never matches.
+{%- endcomment -%}
+{%- assign own_title = page.title | default: "" | strip -%}
+{%- assign page_title = own_title | default: site.title -%}
+{%- if self_url == "/" -%}
+  {%- assign page_title = site.title -%}
+  <title>{{ site.title | escape }} — {{ site.tagline }}</title>
+{%- elsif own_title != "" -%}
+  <title>{{ own_title | escape }} · stuffaboutcode.com</title>
 {%- else -%}
-  <title>{{ site.title | strip_html }} — Python, Raspberry Pi, Minecraft</title>
+  <title>{{ site.title | escape }} — {{ site.tagline }}</title>
 {%- endif -%}
 
 {%- if page.excerpt -%}
@@ -16,27 +49,13 @@
 <meta name="description" content="{{ desc | strip_newlines }}">
 
 {%- comment -%}
-The home page, its pager and every tag page are built from real index.html
-files, so page.url carries a trailing "index.html" -- which is a second,
-uglier URL for a page the server already answers at the directory. Left in, it
-disagrees with jekyll-sitemap, which trims it. Posts and _pages have pretty
-permalinks and pass through untouched.
-{%- endcomment -%}
-{%- assign self_url = page.url -%}
-{%- assign tail = self_url | slice: -10, 10 -%}
-{%- if tail == "index.html" -%}
-  {%- assign cut = self_url | size | minus: 10 -%}
-  {%- assign self_url = self_url | slice: 0, cut -%}
-{%- endif -%}
-
-{%- comment -%}
 Cross-posts set `canonical_url` in front matter so search engines credit the
 original. Everything else points at itself.
 {%- endcomment -%}
 <link rel="canonical" href="{{ page.canonical_url | default: self_url | absolute_url }}">
 
 <meta property="og:site_name" content="stuffaboutcode.com">
-<meta property="og:title" content="{{ page_title | strip_html }}">
+<meta property="og:title" content="{{ page_title | escape }}">
 <meta property="og:description" content="{{ desc | strip_newlines }}">
 <meta property="og:url" content="{{ self_url | absolute_url }}">
 <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
@@ -65,5 +84,5 @@ Has to be inline and blocking; everything else is deferred.
 </script>
 <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 {%- include analytics.html -%}
-<link rel="alternate" type="application/atom+xml" title="{{ site.title | strip_html }}" href="{{ '/feed.xml' | relative_url }}">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
 <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" sizes="any">

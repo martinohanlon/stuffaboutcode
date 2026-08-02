@@ -1,6 +1,6 @@
 # stuffaboutcode.com
 
-Martin O'Hanlon's project blog — Python, Raspberry Pi and Minecraft how-tos.
+Martin O'Hanlon's project blog — code, hardware and project notes.
 A Jekyll site hosted on GitHub Pages.
 
 ---

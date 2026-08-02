@@ -1,6 +1,9 @@
 title: '<Stuff about="code" />'
 description: >-
-  Python, Raspberry Pi and Minecraft how-tos by Martin O'Hanlon.
+  Code, hardware and project notes by Martin O'Hanlon.
+# Appended to the site title on the home page. Kept here rather than hardcoded
+# in head.html so the wording lives in one place.
+tagline: Code, hardware and project notes
 author: Martin O'Hanlon
 url: https://www.stuffaboutcode.com
 baseurl: ""
@@ -51,7 +54,9 @@ pagination:
   enabled: true
   per_page: 7
   permalink: "/page/:num/"
-  title: ":title"
+  # No `title:` here on purpose. It stamps page.title onto every paginated page,
+  # and with no title of its own the home page inherited the SITE title -- which
+  # made it look like a titled page to head.html. Titles are decided there.
   sort_field: "date"
   sort_reverse: true
 
