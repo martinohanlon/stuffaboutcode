@@ -14,7 +14,11 @@
   {%- assign desc = site.description -%}
 {%- endif -%}
 <meta name="description" content="{{ desc | strip_newlines }}">
-<link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- comment -%}
+Cross-posts set `canonical_url` in front matter so search engines credit the
+original. Everything else points at itself.
+{%- endcomment -%}
+<link rel="canonical" href="{{ page.canonical_url | default: page.url | absolute_url }}">
 
 <meta property="og:site_name" content="stuffaboutcode.com">
 <meta property="og:title" content="{{ page_title | strip_html }}">

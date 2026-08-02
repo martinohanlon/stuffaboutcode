@@ -230,6 +230,39 @@ Put it in `_drafts/` with **no date in the filename** — `_drafts/my-idea.md`.
 It shows up under `jekyll serve --drafts` and is skipped by a normal build.
 Publishing means moving it to `_posts/` and adding the date to the filename.
 
+### Cross-post something published elsewhere
+
+Add `canonical_url` to the front matter, pointing at the original:
+
+```markdown
+---
+title: 'Reading a DHT22 sensor'
+date: 2026-08-01 20:15:00 +01:00
+tags: [python, raspberry-pi]
+canonical_url: https://other-site.example/blog/reading-a-dht22/
+---
+```
+
+That is the whole mechanism. `_includes/head.html` emits
+`<link rel="canonical">` pointing at `canonical_url` when it is present and at
+the post's own URL when it is not, so existing posts are untouched.
+
+- **Give the full URL, with scheme** — `https://…`. Jekyll leaves an already
+  absolute URL alone, so it is written out verbatim.
+- The point is to tell search engines which copy is the original, so they credit
+  it rather than treating your copy as duplicate content competing with it.
+- `og:url` deliberately still points at *your* page. That is what social
+  platforms link and unfurl, and a share of your copy should land on your copy.
+- Nothing appears on the page itself — it is a `<head>` tag only. If the
+  original site's terms expect a visible credit, write that line into the post
+  body yourself.
+
+Check it came out right after a build:
+
+```bash
+grep canonical _site/posts/reading-a-dht22/index.html
+```
+
 ### Add a page
 
 Create `_pages/thing.md`, which becomes `/thing/`:
