@@ -1,9 +1,6 @@
 title: '<Stuff about="code" />'
 description: >-
   Code, hardware and project notes by Martin O'Hanlon.
-# Appended to the site title on the home page. Kept here rather than hardcoded
-# in head.html so the wording lives in one place.
-tagline: Code, hardware and project notes
 author: Martin O'Hanlon
 url: https://www.stuffaboutcode.com
 baseurl: ""
