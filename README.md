@@ -118,11 +118,39 @@ python -m http.server 4001
 
 Open [http://localhost:4001](http://localhost:4001).
 
+### Branches
+
+**Do all work on `development`.** It is the default branch, so a fresh clone
+lands there and a stray commit cannot publish anything by accident.
+
+`main` is the published site. Nothing deploys until `development` is merged into
+it:
+
+```bash
+git switch development
+# write, commit, push as often as you like — none of this is live
+git push
+
+# when it is ready to go out
+git switch main
+git merge development
+git push          # this is what deploys
+git switch development
+```
+
+Drafts in `_drafts/` are excluded from the build anyway, so unfinished posts are
+safe on either branch. The branch split matters more for theme and config
+changes, where a half-finished edit on `main` would go straight to the live
+site.
+
 ### Deployment
 
 Push to `main`. [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
 builds the site and publishes it to GitHub Pages. You can also run it by hand
 from the Actions tab.
+
+The workflow only triggers on `main`, so pushing to `development` never
+deploys.
 
 The build runs in Actions rather than on Pages' own Jekyll, which is pinned to
 an old version and only allows a fixed set of plugins.
