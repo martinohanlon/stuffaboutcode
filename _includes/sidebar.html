@@ -15,8 +15,15 @@
   <div>
     <h2>Labels</h2>
     <div class="label-cloud">
-      {%- for t in site.data.tags %}
-      <a href="{{ '/tags/' | append: t.slug | append: '/' | relative_url }}">{{ t.name }} <span class="count">{{ t.count }}</span></a>
+      {%- comment -%}
+      Counts and order come from site.tags; _data/tags.yml only supplies the
+      display name where the slug will not do. See tags-by-count.html.
+      {%- endcomment -%}
+      {%- capture ordered -%}{%- include tags-by-count.html -%}{%- endcapture -%}
+      {%- assign slugs = ordered | split: "," -%}
+      {%- for slug in slugs %}
+      {%- assign meta = site.data.tags | where: "slug", slug | first %}
+      <a href="{{ '/tags/' | append: slug | append: '/' | relative_url }}">{{ meta.name | default: slug }} <span class="count">{{ site.tags[slug] | size }}</span></a>
       {%- endfor %}
     </div>
   </div>

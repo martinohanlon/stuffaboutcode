@@ -814,10 +814,12 @@ def main():
 
     if new:
         review(
-            "tags not in _data/tags.yml, so they will not appear in the sidebar: "
+            "new to this site, and will display as their own slug: "
             + ", ".join(new)
-            + "\n      Add each one and bump the counts of the tags you kept:\n"
-            + "\n".join(f"        - slug: {t}\n          name: '{t}'\n          count: 1" for t in new)
+            + "\n      The sidebar entry and the count are generated, so nothing has to be"
+            + "\n      added. Only give one a display name in _data/tags.yml if the slug"
+            + "\n      reads badly, the way csharp has to read as c#:\n"
+            + "\n".join(f"        - slug: {t}\n          name: '{t}'" for t in new)
         )
     if len(tags) > 3:
         review(f"{len(tags)} tags is more than this site usually carries -- prune to the 2-3 that matter.")

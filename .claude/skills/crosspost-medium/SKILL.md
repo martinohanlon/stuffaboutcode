@@ -70,10 +70,11 @@ and flags every disagreement, but the last word is yours. Rouge (4.7) handles
 have no caption, and those arrive as `![]`. Describe them.
 
 **Prune the tags.** Medium posts usually carry five; this site runs two or three.
-They must be slugs (`raspberry-pi`, not `Raspberry Pi`). A tag page is generated
-automatically, but a **new tag will not appear in the sidebar** until it has an
-entry in `_data/tags.yml` — and the `count` there is maintained by hand, so bump
-the counts of the tags you kept. The script prints the YAML to add.
+They must be slugs (`raspberry-pi`, not `Raspberry Pi`). Nothing else is needed:
+the tag page, the sidebar entry and the count are all generated. Only add an entry
+to `_data/tags.yml` if the slug is a poor display name, the way `csharp` needs to
+read as `c#`. The script still lists tags with no entry — treat that as a prompt to
+consider a display name, not a chore.
 
 **Resolve any TODO embeds.** YouTube is converted to
 `{% include youtube.html id="…" %}` automatically. Anything else is left as

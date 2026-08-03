@@ -43,7 +43,7 @@ A Jekyll site hosted on GitHub Pages.
 │   └── embed.html         {% include embed.html src="…" title="…" %}
 │
 ├── _data/
-│   ├── tags.yml           label slug → display name and count (drives the sidebar)
+│   ├── tags.yml           label slug → display name, where the slug will not do
 │   └── about_links.yml    the link cards on /about/
 │
 ├── assets/
@@ -346,19 +346,23 @@ To put it in the sidebar's **Pages** list, add a link in
 Add slugs to a post's `tags:` and the tag page at `/tags/<slug>/` is generated
 automatically, along with the chips under the post.
 
-**A brand-new tag will not appear in the sidebar's Labels list.** That list is
-driven by `_data/tags.yml`, which carries a display name and count per label —
-it is how `/tags/csharp/` manages to display as `c#`. To list a new label, add
-an entry:
+**That is all a new tag needs.** The sidebar's Labels list and the 404 page's
+chips are both built from `site.tags` by
+[`_includes/tags-by-count.html`](_includes/tags-by-count.html), so a label appears
+as soon as a post uses it, ordered by post count, with the count calculated at
+build time. Nothing to maintain by hand.
+
+`_data/tags.yml` is only a display-name lookup, for the names a slug cannot
+express — it is how `/tags/csharp/` displays as `c#` and `dotnet` as `.net`. A
+label with no entry displays as its own slug, which is usually what you want. Add
+one when it is not:
 
 ```yaml
-- slug: sensors
-  name: 'sensors'
-  count: 3
+- slug: dotnet
+  name: '.net'
 ```
 
-The `count` is not calculated, so it needs updating by hand. Keep the list in
-count-descending order.
+Ties in the count are broken alphabetically, so the order is deterministic.
 
 ### Turn analytics off (or change the property)
 

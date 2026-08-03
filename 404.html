@@ -28,8 +28,14 @@ Reuses the list header and empty-state styles rather than inventing a 404 look.
     Try the search box, or browse <a href="{{ '/' | relative_url }}">all {{ site.posts | size }} posts</a>.
   </p>
   <div class="chips chips--centred">
-    {%- for t in site.data.tags limit: 6 %}
-    <a class="chip" href="{{ '/tags/' | append: t.slug | append: '/' | relative_url }}">#{{ t.slug }}</a>
+    {%- comment -%}
+    The six most used labels, ordered by the same include the sidebar uses -- so
+    "most used" cannot drift out of step with a hand-maintained list.
+    {%- endcomment -%}
+    {%- capture ordered -%}{%- include tags-by-count.html -%}{%- endcapture -%}
+    {%- assign slugs = ordered | split: "," -%}
+    {%- for slug in slugs limit: 6 %}
+    <a class="chip" href="{{ '/tags/' | append: slug | append: '/' | relative_url }}">#{{ slug }}</a>
     {%- endfor %}
   </div>
 </div>
