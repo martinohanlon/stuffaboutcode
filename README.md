@@ -155,6 +155,13 @@ from the Actions tab.
 The workflow only triggers on `main`, so pushing to `development` never
 deploys.
 
+```bash
+git checkout main
+git pull
+git merge development
+git push origin main
+```
+
 The build runs in Actions rather than on Pages' own Jekyll, which is pinned to
 an old version and only allows a fixed set of plugins.
 
