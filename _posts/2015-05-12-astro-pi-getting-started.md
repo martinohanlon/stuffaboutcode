@@ -140,7 +140,7 @@ ap.clear([0,0,255])
 Create a new program and as before import the AstroPi class and create the object:
 
 ```python
-from sense-hat import AstroPi
+from sense_hat import AstroPi
 
 ap = AstroPi()
 ```
