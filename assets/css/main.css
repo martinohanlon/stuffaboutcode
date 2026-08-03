@@ -623,20 +623,28 @@ figure.embed iframe {
     grid-template-columns: minmax(0, 1fr);
     gap: 40px;
   }
+  /* The sidebar follows the content in one column, so its search box is still
+     reachable -- just further down. It used to be hidden here and handed off to
+     a .header-search that was never built, which removed search from every
+     screen under 900px. */
   .sidebar { padding-top: 0; }
-  /* sidebar follows the content; search moves into the header */
-  .sidebar .search-block { display: none; }
-  .header-search { display: flex; }
   .site-nav { gap: 14px; }
   .post { max-width: none; }
   .page-article { max-width: none; }
+}
+
+/* The header runs out of room well before the phone breakpoint. Roughly, at
+   17px JetBrains Mono the wordmark alone is ~224px, the four nav links ~300px
+   and the toggle ~72px, so with padding and gaps it needs about 710px. Drop the
+   wide-only links before that, leaving "about". */
+@media (max-width: 760px) {
+  .site-nav .wide-only { display: none; }
 }
 
 @media (max-width: 620px) {
   .shell { padding: 0 18px; }
   .site-footer { padding: 24px 18px 0; }
   .site-header .shell { gap: 14px; }
-  .site-nav .wide-only { display: none; }
   .post-title { font-size: 27px; }
   .prose { font-size: 16px; }
   /* never shrink code below 13px */
@@ -644,4 +652,12 @@ figure.embed iframe {
   .post-row { flex-direction: column; gap: 4px; }
 }
 
-.header-search { display: none; }
+/* Phone. Even with only "about" the header does not fit 375px until the wordmark
+   and the toggle give something up: the wordmark is 22 monospace characters, and
+   the toggle keeps its glyph but drops the word (the aria-label still says it). */
+@media (max-width: 420px) {
+  .site-header .shell { gap: 10px; }
+  .wordmark { font-size: 14px; }
+  .theme-toggle { padding: 6px 8px; }
+  .theme-toggle .toggle-word { display: none; }
+}

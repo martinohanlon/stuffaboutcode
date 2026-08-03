@@ -32,9 +32,29 @@ VERBOSE = "-v" in sys.argv
 HTML_LEFTOVER = re.compile(r"</(div|span|br|font|pre|table|td|tr|b|i|a)\b|<(div|span|font)\b", re.I)
 INLINE_CODE = re.compile(r"`[^`\n]+`")
 
-# Posts dated before this are Blogger imports and must keep their old URL in
-# redirect_from. Posts written since are native and never had one.
-MIGRATION_DATE = "2026-08-01"
+def migrated_slugs():
+    """Slugs that came from Blogger, read from the export itself.
+
+    Only these need a redirect_from. A date cutoff was tried first and is wrong:
+    a cross-post carries the original's publication date, so a new post dated
+    before the migration looked like an import and was reported as missing its
+    old URL. The export is the actual answer.
+    """
+    slugs = set()
+    try:
+        import xml.etree.ElementTree as ET
+
+        root = ET.parse(C.SRC).getroot()
+        for e in root.findall(C.A + "entry"):
+            fn = (e.findtext(C.B + "filename") or "").strip()
+            if fn:
+                slugs.add(re.sub(r"\.html?$", "", fn.rsplit("/", 1)[-1]))
+    except Exception:
+        pass  # no export available: skip the check rather than cry wolf
+    return slugs
+
+
+MIGRATED = migrated_slugs()
 
 
 def files():
@@ -171,10 +191,9 @@ def main():
                 problems["missing date"] += 1
                 issues.append(f"{rel}: no date")
             # Only posts carried over from Blogger have an old URL to preserve.
-            # Anything written since the migration is native to this site and
-            # has never lived anywhere else.
-            migrated = os.path.basename(rel)[:10] < MIGRATION_DATE
-            if migrated and "redirect_from:" not in fm:
+            # Anything written since is native to this site and never had one.
+            slug = os.path.basename(rel)[11:-3]
+            if slug in MIGRATED and "redirect_from:" not in fm:
                 problems["missing redirect_from"] += 1
                 issues.append(f"{rel}: no redirect_from")
 

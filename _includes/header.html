@@ -3,14 +3,24 @@
     <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="stuffaboutcode.com — home"
       ><span class="p">&lt;</span><span class="n">Stuff</span> <span class="a">about</span><span class="p">=</span><span class="s">"code"</span> <span class="p">/&gt;</span></a>
 
+    {%- comment -%}
+    wide-only links drop out once the header runs out of room, leaving just
+    "about". The wordmark already links home, so "posts" is covered, and both
+    tags are in the sidebar's Labels list.
+    {%- endcomment -%}
     <nav class="site-nav" aria-label="Main">
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>posts</a>
-      <a href="{{ '/tags/raspberry-pi/' | relative_url }}">raspberry pi</a>
-      <a href="{{ '/tags/minecraft/' | relative_url }}">minecraft</a>
+      <a class="wide-only" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>posts</a>
+      <a class="wide-only" href="{{ '/tags/raspberry-pi/' | relative_url }}">raspberry pi</a>
+      <a class="wide-only" href="{{ '/tags/minecraft/' | relative_url }}">minecraft</a>
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>about</a>
     </nav>
 
+    {%- comment -%}
+    The word is its own span so it can be dropped on a narrow screen, leaving
+    the glyph. site.js keeps this shape when it swaps the label.
+    {%- endcomment -%}
     <button class="theme-toggle" type="button" data-theme-toggle
-            title="Switch colour theme" aria-live="polite">light ☀</button>
+            title="Switch colour theme" aria-label="Switch to light theme"
+            ><span class="toggle-word">light </span>☀</button>
   </div>
 </header>

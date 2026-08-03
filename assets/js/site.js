@@ -9,18 +9,28 @@
 
   var root = document.documentElement;
 
-  function label(theme) {
-    // the button names the mode it switches TO
-    return theme === "dark" ? "light ☀" : "dark ☾";
+  // The button names the mode it switches TO. The word goes in its own span so
+  // a narrow header can drop it and keep the glyph; the aria-label carries the
+  // full meaning either way.
+  function setLabel(btn, theme) {
+    var word = theme === "dark" ? "light" : "dark";
+    var glyph = theme === "dark" ? "☀" : "☾";
+    var span = document.createElement("span");
+    span.className = "toggle-word";
+    span.textContent = word + " ";  // space inside, so hiding the word hides it too
+    btn.textContent = "";
+    btn.appendChild(span);
+    btn.appendChild(document.createTextNode(glyph));
+    btn.setAttribute("aria-label", "Switch to " + word + " theme");
   }
 
   var toggle = document.querySelector("[data-theme-toggle]");
   if (toggle) {
-    toggle.textContent = label(root.dataset.theme || "dark");
+    setLabel(toggle, root.dataset.theme || "dark");
     toggle.addEventListener("click", function () {
       var next = (root.dataset.theme === "light") ? "dark" : "light";
       root.dataset.theme = next;
-      toggle.textContent = label(next);
+      setLabel(toggle, next);
       try { localStorage.setItem("theme", next); } catch (e) { /* ignore */ }
     });
   }
