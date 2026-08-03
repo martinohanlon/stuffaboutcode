@@ -24,7 +24,7 @@ http://tinyurl.com/#####.
 
 I created a .net function which used the HttpWebRequest class to call the TinyURL api and then strip out the response.
 
-```asp
+```html
 public string getTinyURL(string longURL)
     {
         string shortUrl = "";

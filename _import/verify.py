@@ -88,6 +88,10 @@ def classify(code, err):
     # not damage. Check before blaming indentation.
     if lines and re.match(r"^[ \t]+\S", lines[0]):
         return "fragment/truncated"
+    # A snippet that opens a block and stops -- "while gameover == False:" quoted
+    # on its own to explain it -- is an excerpt, not broken indentation.
+    if lines and lines[-1].rstrip().endswith(":"):
+        return "fragment/truncated"
     if "indent" in msg:
         return "indentation"
     if "unterminated string" in msg or "was never closed" in msg or "eof" in msg:

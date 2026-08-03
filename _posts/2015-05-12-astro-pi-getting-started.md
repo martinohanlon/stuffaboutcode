@@ -85,7 +85,7 @@ ap = AstroPi()
 
 You can use the show_message() function to display a message on the LED matrix:
 
-```text
+```python
 ap.show_message("Hello Space")
 ```
 
@@ -99,13 +99,13 @@ The AstroPi class allow you to interact with the colour LED matrix using the set
 
 To make the top left pixel red you would use:
 
-```text
+```python
 ap.set_pixel(0, 0, 255, 0, 0)
 ```
 
 To make the bottom right pixel white (all colours) you would use:
 
-```text
+```python
 ap.set_pixel(7, 7, 255, 255, 255)
 ```
 
@@ -113,19 +113,19 @@ Add the code above to your program and run it.
 
 To turn a pixel off you would set it to black (no colours):
 
-```text
+```python
 ap.set_pixel(7, 7, 0, 0, 0)
 ```
 
 You can clear all the pixels using:
 
-```text
+```python
 ap.clear()
 ```
 
 The clear() function can also be used to set all the pixels to one colour by passing the r,g,b values in a list i.e. blue:
 
-```text
+```python
 ap.clear([0,0,255])
 ```
 

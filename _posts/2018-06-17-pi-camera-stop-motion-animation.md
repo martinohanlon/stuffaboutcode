@@ -42,7 +42,7 @@ Most of the work was finding a way to create animated gifs in Python and working
 
 When the image is captured from the camera it isn't stored to a file, it is stored in a numpy array, this means each frame is only stored in memory making it faster:
 
-```text
+```python
 # create the camera
 camera = PiCamera(resolution="640x480")
 camera_output = PiRGBArray(camera)
@@ -55,13 +55,13 @@ animation.images.append(camera_output.array)
 
 The python module imageio is used to create the gif by passing the frames as a list, but again rather than being written to disk each time it is created as an in memory BytesIO stream:
 
-```text
+```python
 gif_output = BytesIO()
 imageio.mimsave(gif_output, animation.images, format="gif")
 ```
 
 When the animated gif is displayed in guizero the BytesIO stream has to be open into a PIL Image.
 
-```text
+```python
 animation.image = Image.open(gif_output)
 ```

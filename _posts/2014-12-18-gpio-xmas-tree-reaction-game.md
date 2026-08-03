@@ -55,7 +55,7 @@ To get around this, I made a threaded version of the pocketmoneytronics tree.py 
 
 Using the original libraries, you would have used the following code to light up all the leds for 1 second:
 
-```text
+```python
 tree.setup()
 #turn all the leds on for 1 second
 #the program stops here and nothing can happen until the leds turns off
@@ -65,7 +65,7 @@ tree.cleanup()
 
 Using my threaded class you would use:
 
-```text
+```python
 #create the XmasTree object
 tree = XmasTree()
 #start the tree object

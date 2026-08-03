@@ -18,7 +18,7 @@ With this and the [programmable cannon](/posts/raspberry-pi-minecraft-cannon/) I
 
 The block event methods in the API are pretty easy to understand, after you have made a connection to the minecraft server:
 
-```text
+```python
 mc = minecraft.Minecraft.create()
 ```
 

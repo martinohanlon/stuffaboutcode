@@ -98,7 +98,7 @@ class HoldableButton(Button):
 
 Using the HoldableButton class is pretty simple, similar to the gpiozero [Button](https://gpiozero.readthedocs.org/en/v1.1.0/api_input.html#button) class and can be swapped for the Button class with no other changes.
 
-```text
+```python
 holdbutton = HoldableButton(pin, hold_time = 1, repeat = False)
 ```
 

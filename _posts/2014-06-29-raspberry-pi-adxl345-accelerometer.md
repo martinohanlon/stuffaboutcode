@@ -131,7 +131,7 @@ print z
 
 The default range is 2g which means that the maximum G the ADXL345 can measure is 2.048, but at a high degree of sensitivity, you can change it so the maximum is 2g, 4g, 8g or 16g but with a lower level of sensitivity using:
 
-```text
+```python
 accel.setRange(adxl345.RANGE_2G)
 accel.setRange(adxl345.RANGE_4G)
 accel.setRange(adxl345.RANGE_8G)

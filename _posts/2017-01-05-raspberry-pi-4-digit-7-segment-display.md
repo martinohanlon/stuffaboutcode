@@ -14,7 +14,7 @@ This builds on the code I created for driving [single 7 segment displays](/posts
 
 Hopefully the PR will get added into a gpiozero release soon, but until then add this [code](https://gist.github.com/martinohanlon/23a8a67bc3c68988fbb492b3d5d42ca5) to your project and use the following to drive your display.
 
-```text
+```python
 #setup the pins
 
 #these are the pins the LED are connected too

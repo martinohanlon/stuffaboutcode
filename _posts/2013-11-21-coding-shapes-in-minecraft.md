@@ -35,7 +35,7 @@ import minecraft.minecraftstuff as minecraftstuff
 
 Once you have connected to minecraft you can create the MinecraftDrawing object by passing in the minecraft connection:
 
-```text
+```python
 #connect to minecraft
 mc = minecraft.Minecraft.create()
 #create minecraft drawing object and pass in the minecraft connection

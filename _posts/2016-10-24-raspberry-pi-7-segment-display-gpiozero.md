@@ -197,13 +197,13 @@ Create an instance on the 7 segment display object, you need to pass the pins in
 
 ![](/assets/img/2016/10/7seg_pinouts.png)
 
-```text
+```python
 seven_seg = SevenSegmentDisplay(20, 21, 6, 22, 27, 18, 15, 13)
 ```
 
 If you have a common-anode display you will also need to set the active_high parameter to False:
 
-```text
+```python
 seven_seg = SevenSegmentDisplay(20, 21, 6, 22, 27, 18, 15, 13,
                                 active_high=False)
 ```
@@ -212,7 +212,7 @@ seven_seg = SevenSegmentDisplay(20, 21, 6, 22, 27, 18, 15, 13,
 
 You can show a character on the display using the .display() method.
 
-```text
+```python
 seven_seg.display("8")
 ```
 
@@ -220,7 +220,7 @@ seven_seg.display("8")
 
 You can add your own characters to the display, using the .set_char_layout() method passing the character and a tuple of 7 booleans for each of the LEDs in order A,B,C,D,E,F,G.
 
-```text
+```python
 seven_seg.set_char_layout("_", (False, False, False, True, False, False, False))
 seven_seg.display("_")
 ```

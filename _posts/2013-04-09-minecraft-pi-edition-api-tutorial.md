@@ -73,13 +73,13 @@ import time
 
 Next, we need to use the Minecraft class in the python library to create a connection to the game’s server, this object will also be how we interact with the game and will provide access to all the functions. When your program runs this statement, Minecraft will have to be running and you will need to be in a game, otherwise you will get errors.
 
-```text
+```python
 mc = minecraft.Minecraft.create()
 ```
 
 Using our minecraft object, mc, we can then interact with the game and send the player a message. We will also put a delay in using the time.sleep() function otherwise the whole program will run too fast for us to see what’s going on.
 
-```text
+```python
 mc.postToChat("Hello Minecraft World")
 time.sleep(5)
 ```
@@ -90,7 +90,7 @@ Using the program built so far, you can test to make sure everything is working.
 
 Interacting with the player is done through the player class of the mc object allowing us to find the position and change the position of the player. The next block of code finds the players position using the getPos() command, which returns an object of x,y and z coordinates, the setPos() command is then used to move the player 50 blocks up, by adding 50 to the player’s y coordinate. We then add a delay, so there is enough time for your player to fall down to the ground!
 
-```text
+```python
 playerPos = mc.player.getPos()
 mc.player.setPos(playerPos.x, playerPos.y + 50, playerPos.z)
 mc.postToChat("Dont look down")
@@ -101,7 +101,7 @@ You can use the position of the player as a starting point for interacting block
 
 The code below gets the players tile position, it then calls the minecraft API’s getBlock() function to find out the type of block the player is standing on (by minusing 1 from the y co-ordinate) before using setBlock() to create blocks of the same type the player is standing on around him. So if your player is standing on DIRT, he will end up with DIRT surrounding him, however if he is standing on STONE, STONE will appear.
 
-```text
+```python
 playerTilePos = mc.player.getTilePos()
 blockBelowPlayerType = mc.getBlock(playerTilePos.x, playerTilePos.y - 1, playerTilePos.z)
 mc.setBlock(playerTilePos.x + 1, playerTilePos.y + 1, playerTilePos.z, blockBelowPlayerType)
@@ -116,7 +116,7 @@ time.sleep(5)
 
 We have now trapped our player within 4 blocks (providing he doesn’t break out!), in order to set him free we need to remove a block. Removing blocks is done using setBlock(), but rather than making the block solid like WOOD or STONE we set it to AIR.
 
-```text
+```python
 mc.setBlock(playerTilePos.x + 1, playerTilePos.y + 1, playerTilePos.z, block.AIR)
 mc.postToChat("Be free")
 time.sleep(5)
@@ -126,7 +126,7 @@ A full list of all the available blocks can be found in either the minecraft api
 
 The API also allows you to set many blocks at a time, allowing you to create cuboids very quickly using the setBlocks() command. It works by specifying 2 sets of x,y,z coordinates which it then fills the gap between the 2 coordinates with a certain block you pass as the final parameter. The code below will create a diamond floor underneath our player 50 blocks (across) x 1 block (up) x 50 blocks (along), with our player in the middle (i.e. 25 behind and to the left, 25 in front and to the right).
 
-```text
+```python
 mc.setBlocks(playerTilePos.x - 25, playerTilePos.y - 1, playerTilePos.z - 25, playerTilePos.x + 25, playerTilePos.y -1, playerTilePos.z + 25, block.DIAMOND_BLOCK)
 mc.postToChat("Now thats a big diamond floor!")
 ```

@@ -79,13 +79,13 @@ gameover = False
 
 Scroll "BopBit" on the screen to show its the start of the game:
 
-```text
+```python
 display.scroll("BopBit")
 ```
 
 Loop until the game is over:
 
-```text
+```python
 while gameover == False:
 ```
 
@@ -122,7 +122,7 @@ If the player pressed the right button in time show a tick and increase the scor
 
 Wait for a small amount of time (half the current speed):
 
-```text
+```python
     sleep(int(SPEED[level] / 2))
 ```
 

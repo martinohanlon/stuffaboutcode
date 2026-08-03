@@ -109,7 +109,7 @@ xboxCont.setupControlCallback(
 
 The XboxController runs in its own thread, so you need to tell the controller to start using
 
-```text
+```python
 xboxCont.start()
 ```
 
@@ -121,7 +121,7 @@ print xboxCont.RTRIGGER
 
 The XboxController also needs to be stopped at the end of your program using
 
-```text
+```python
 xboxCont.stop()
 ```
 

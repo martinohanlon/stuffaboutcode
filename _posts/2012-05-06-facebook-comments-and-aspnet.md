@@ -52,7 +52,7 @@ This created me some challenges when implementing the plugin, as the page I want
 
 I decided that I would use the URL the user would be familiar with (i.e. whats shown by the browser), so I wrote a function to pull out the actual browser URL:
 
-```asp
+```html
      public static string getFacebookCommentsURL(HttpRequest request)
     {
         string commentsURL = getFullBrowserURL(request);
@@ -77,7 +77,7 @@ http://www.gooffpiste.com/St-Anton-offpiste/4?fb:comments=27497124....
 Which is presumably used by the facebook plugin to take the user to the right comment, but meant that a user didn't see comments as my function included this query string within the href attribute of the control.
  I then called this function in-line in the asp.net page to dynamically build the facebook comment control.
 
-```asp
+```html
 <div class="fb-comments" href="<%=utils.getFacebookCommentsURL(Request)%>" width="735" ></div>
 ```
 

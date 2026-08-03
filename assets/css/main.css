@@ -408,6 +408,18 @@ figure.embed iframe {
   overflow: hidden;
 }
 
+/* Fallback for a fence whose language Rouge has no lexer for: kramdown emits a
+   bare <pre> with no .highlighter-rouge wrapper, so without this the block
+   renders with no border or background, and site.js finds no language class to
+   build a header from. */
+.prose > pre:not([class]) {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--codebg);
+  margin: 0 0 26px;
+  overflow-x: auto;
+}
+
 .code-head {
   display: flex;
   align-items: center;

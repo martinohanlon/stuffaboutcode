@@ -50,7 +50,7 @@ print(client.mpd_version)
 
 Some useful other mpd-python2 functions are:
 
-```text
+```python
 #set the volume between 0 and 100
 client.setvol(100)
 

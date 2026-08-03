@@ -95,13 +95,13 @@ from time import sleep
 
 - Create a connection to Minecraft using the code.
 
-```text
+```python
 mc = Minecraft.create()
 ```
 
 - Post a message to the chat window.
 
-```text
+```python
 mc.postToChat("Micromine bitcraft earthquake")
 ```
 
@@ -115,7 +115,7 @@ Update your program to shake Steve, by adding the following code at the bottom o
 
 - Create a pin which is connected to Pi GPIO 17 and micro:bit pin 0.
 
-```text
+```python
 pin0 = DigitalInputDevice(17)
 ```
 

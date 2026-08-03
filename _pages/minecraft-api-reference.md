@@ -36,7 +36,7 @@ Not all functions and block types are available on all version of the api, by ea
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #use default address and port
 mc = minecraft.Minecraft.create()
 #specify ip address and port
@@ -48,7 +48,7 @@ mc = minecraft.Minecraft.create("192.168.1.1", 4711)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #retrieves the block type for the block at 0,0,0
 blockType = mc.getBlock(0,0,0)
 ```
@@ -72,7 +72,7 @@ for block in blocks:
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #retrieves a block object for the block at 0,0,0
 blockObj = mc.getBlockWithData(0,0,0)
 ```
@@ -83,7 +83,7 @@ blockObj = mc.getBlockWithData(0,0,0)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #sets a block at an x, y, z co-ordinate to a particular type
 mc.setBlock(0,0,0,block.DIRT.id)
 #sets a block to a particular type and 'subtype'
@@ -95,7 +95,7 @@ mc.setblock(0,0,0,block.WOOD.id, 1)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #sets many blocks at a time, filling the gap between 2 sets of x, y, z co-ordinates
 mc.setBlocks(-1, -1, -1, 1, 1, 1, block.STONE.id)
 ```
@@ -105,7 +105,7 @@ mc.setBlocks(-1, -1, -1, 1, 1, 1, block.STONE.id)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #find the y (vertical) of an x, z co-ordinate which represents the 'highest' (non-air) block
 y = mc.getHeight(0,0)
 ```
@@ -138,7 +138,7 @@ print entityId
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)
 
-```text
+```python
 mc.saveCheckpoint()
 ```
 
@@ -146,7 +146,7 @@ mc.saveCheckpoint()
  "Restore the world state to the checkpoint"
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)
 
-```text
+```python
 mc.restoreCheckpoint()
 ```
 
@@ -155,7 +155,7 @@ mc.restoreCheckpoint()
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #write 'Hello Minecraft World' to the chat window
 mc.postToChat("Hello Minecraft World")
 ```
@@ -164,7 +164,7 @@ mc.postToChat("Hello Minecraft World")
  "Set a world setting (setting, status). keys: world_immutable, nametags_visible"
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)
 
-```text
+```python
 #change world immutable to True
 mc.setting("world_immutable", True)
 #change nametags_visible setting to False
@@ -178,7 +178,7 @@ mc.setting("nametags_visible", False)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #get players position as floats
 playerPos = mc.player.getPos()
 ```
@@ -188,7 +188,7 @@ playerPos = mc.player.getPos()
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #set the players position as floats
 mc.player.setPos(0.0,0.0,0.0)
 ```
@@ -198,7 +198,7 @@ mc.player.setPos(0.0,0.0,0.0)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #get the position of the tile the players is on
 playerTile = mc.player.getTilePos()
 ```
@@ -208,7 +208,7 @@ playerTile = mc.player.getTilePos()
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #set the position of the tile the player is on
 mc.player.setTilePos(0,0,0)
 ```
@@ -217,7 +217,7 @@ mc.player.setTilePos(0,0,0)
  "Set a player setting (setting, status). keys: autojump"
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)
 
-```text
+```python
 #change the autojump setting to True
 mc.player.setting("autojump", True)
 ```
@@ -272,7 +272,7 @@ entityIds = mc.getPlayerEntityIds()
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #get first entity position as floats
 entityPos = mc.entity.getPos(entityId)
 ```
@@ -282,7 +282,7 @@ entityPos = mc.entity.getPos(entityId)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #set the players position as floats
 mc.entity.setPos(entityId,0.0,0.0,0.0)
 ```
@@ -292,7 +292,7 @@ mc.entity.setPos(entityId,0.0,0.0,0.0)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #get the position of the tile the entity is on
 entityTile = mc.entity.getTilePos(entityId)
 ```
@@ -302,7 +302,7 @@ entityTile = mc.entity.getTilePos(entityId)
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #set the position of the tile the entity is on
 mc.entity.setTilePos(entityId,0,0,0)
 ```
@@ -346,7 +346,7 @@ print direction
  "Set camera mode to normal Minecraft view (\[entityId\])"
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)
 
-```text
+```python
 #set camera mode to normal for a specific player
 mc.camera.setNormal(entityId)
 ```
@@ -355,7 +355,7 @@ mc.camera.setNormal(entityId)
  "Set camera mode to fixed view"
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)
 
-```text
+```python
 #set camera mode to fixed
 mc.camera.setFixed()
 ```
@@ -364,7 +364,7 @@ mc.camera.setFixed()
  "Set camera mode to follow an entity (\[entityId\])"
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)
 
-```text
+```python
 #set camera mode to follow for a specific player
 mc.camera.setFollow(entityId)
 ```
@@ -373,7 +373,7 @@ mc.camera.setFollow(entityId)
  "Set camera entity position (x,y,z)"
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)
 
-```text
+```python
 #set camera position to a specific position of x, y, z
 mc.camera.setPos(0,0,0)
 ```
@@ -409,7 +409,7 @@ for chatEvent in chatEvents:
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #clear all events that have happened since the events where last got
 mc.events.clearAll()
 ```
@@ -420,7 +420,7 @@ mc.events.clearAll()
 
 ![Available on Minecraft: Pi Edition](/assets/img/2017/03/raspi_logo_small.png)![Available on RaspberryJuice](/assets/img/2017/03/bukkit_logo_small.png)
 
-```text
+```python
 #create block of a specific type
 blockObj = block.Block(id)
 #create a block of a specific type and apply a data value
@@ -431,7 +431,7 @@ blockObj = block.Block(id, data)
 
 "The id (or type) of block"
 
-```text
+```python
 AIR                 = Block(0)
 STONE               = Block(1)
 GRASS               = Block(2)
@@ -638,7 +638,7 @@ NETHER_REACTOR_CORE:
 
 "The definition of a BlockEvent in Minecraft, used to describe an event in Minecraft affecting blocks; returned by the Minecraft.events.pollBlockHits() method."
 
-```text
+```python
 blockEvent = mc.events.pollBlockHits()
 ```
 
@@ -685,7 +685,7 @@ blockEventPlayer - BlockEvent.entityId
 
 "The definition of a ChatEvent in Minecraft, used to describe an event when a message is posted to the chat bar in Minecraft, returned by Minecraft.events.pollBlockHits() method."
 
-```text
+```python
 chatEvent = mc.events.pollChatPosts()
 ```
 
@@ -723,7 +723,7 @@ blockEventPlayer - BlockEvent.entityId
 
 "The definition of a 3 part vector in Minecraft, i.e. a set of x, y, z co-ordinates; x and z are the horizontal positions, y the vertical"
 
-```text
+```python
 position = vec3.Vec(0,0,0)
 ```
 
