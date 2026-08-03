@@ -16,6 +16,9 @@ A Jekyll site hosted on GitHub Pages.
 ├── .github/workflows/
 │   └── deploy.yml         builds on push to main and publishes to Pages
 │
+├── .claude/skills/
+│   └── crosspost-medium/  Medium → draft converter and the process around it
+│
 ├── _posts/                one file per post — YYYY-MM-DD-slug.md
 ├── _pages/                standalone pages — about, raspberry-pi, minecraft, …
 ├── _drafts/               unpublished work, no date in the filename
@@ -290,6 +293,37 @@ Check it came out right after a build:
 ```bash
 grep canonical _site/posts/reading-a-dht22/index.html
 ```
+
+### Cross-post from Medium
+
+Use the [`/crosspost-medium/`](.claude/skills/crosspost-medium/) skill to cross-post a Medium blog:
+
+```
+crosspost-medium https://medium.com/link-to-post canonical link - https://link.to.original/post
+```
+
+To run the converter yourself:
+
+```bash
+python .claude/skills/crosspost-medium/medium_to_md.py <medium-url> --canonical <canonical-url> --tags graphrag,neo4j
+```
+
+**The two URLs are usually different.** The Medium URL is what gets converted; the
+canonical is whoever should get the credit, often a third site. Omit
+`--canonical` and it falls back to Medium's own.
+
+You get `_drafts/YYYY-MM-DD-slug.md`, the images self-hosted under
+`assets/img/YYYY/MM/`, and a review list of what it would not decide for you —
+fence languages, alt text, tags, embeds. Work through that, check it with
+`python _import/verify.py`, then publish with a plain move, since the draft is
+already dated:
+
+```bash
+git mv _drafts/2026-07-22-my-post.md _posts/2026-07-22-my-post.md
+```
+
+`SKILL.md` in that directory has the full process and the reasoning. Other flags:
+`--dry-run`, `--force`, `--credit-name`, `--no-credit`, `--self-test`.
 
 ### Add a page
 
