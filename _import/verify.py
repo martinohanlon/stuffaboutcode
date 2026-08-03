@@ -178,8 +178,10 @@ def main():
                 problems["missing redirect_from"] += 1
                 issues.append(f"{rel}: no redirect_from")
 
-        # fenced blocks
-        for lang, code in C.iter_fences(body):
+        # Fences are read from the whole file rather than from `body`, so
+        # first_line is a line number in the file. Reporting "line 23" of a
+        # listing leaves you counting lines by hand to find it.
+        for lang, code, first_line in C.iter_fences(text):
             langs[lang or "(none)"] += 1
             if not lang:
                 no_lang.append(rel)
@@ -190,11 +192,12 @@ def main():
                 except SyntaxError as e:
                     bucket = classify(code, e)
                     buckets[bucket] += 1
+                    file_line = first_line + (e.lineno or 1) - 1
                     if bucket == "indentation":
                         py_fail += 1
-                        failures.append((rel, e.lineno, str(e.msg), code))
+                        failures.append((rel, file_line, str(e.msg), code))
                     else:
-                        py_other.append((bucket, rel, e.lineno, str(e.msg)))
+                        py_other.append((bucket, rel, file_line, str(e.msg)))
 
         # markdown hygiene
         # Strip inline `code` as well as fenced blocks: a post may legitimately
@@ -251,7 +254,7 @@ def main():
     if other:
         print(f"\n--- python 'other' ({len(other)}) ---")
         for bucket, rel, lineno, msg in other:
-            print(f"  {rel}  line {lineno}: {msg}")
+            print(f"  {rel}:{lineno}  {msg}")
 
     if issues and VERBOSE:
         print(f"\n--- issues ({len(issues)}) ---")

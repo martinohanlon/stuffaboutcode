@@ -71,7 +71,7 @@ steve.right(90)
 #tell the turtle to go up by 45 degress
 steve.up(45)
 
-tell the turtle to go forward 25 blocks
+#tell the turtle to go forward 25 blocks
 steve.forward(25)
 ```
 

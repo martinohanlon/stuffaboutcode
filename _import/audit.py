@@ -77,7 +77,7 @@ def source_code_text(html_str):
 
 def output_code_text(md):
     body = md.split("\n---\n", 1)[-1] if md.startswith("---\n") else md
-    fences = [code for _, code in C.iter_fences(body)]
+    fences = [code for _, code, _ in C.iter_fences(body)]
     inline = INLINE_CODE.findall(C.strip_fences(body))
     return "\n".join(fences + inline), fences
 

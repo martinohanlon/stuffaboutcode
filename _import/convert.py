@@ -556,7 +556,12 @@ FENCE_RE = re.compile(
 
 
 def iter_fences(markdown):
-    """Yield (lang, code) for every fenced block, dedented.
+    """Yield (lang, code, first_line) for every fenced block, dedented.
+
+    first_line is the 1-based line number of the block's first line of code
+    within `markdown`, so a caller that finds a fault at line N of the code can
+    report it as a line in the file. Without that, an error inside a 200-line
+    listing is reported as "line 23" and you have to go hunting.
 
     Handles fences indented inside a list item. A regex anchored hard at column
     zero silently skips those, which meant the audit reported their code as
@@ -564,12 +569,13 @@ def iter_fences(markdown):
     """
     for m in FENCE_RE.finditer(markdown):
         indent, lang, body = m.group(1), m.group(3), m.group(4)
+        first_line = markdown.count("\n", 0, m.start(4)) + 1
         if indent:
             body = "\n".join(
                 ln[len(indent) :] if ln.startswith(indent) else ln
                 for ln in body.split("\n")
             )
-        yield lang, body
+        yield lang, body, first_line
 
 
 def strip_fences(markdown):
