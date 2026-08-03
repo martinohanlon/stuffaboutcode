@@ -9,7 +9,7 @@ Ask for “a highly rated action movie about travelling to other planets” and 
 
 Same question, same data, different retrieval. I built a small demo to make that difference impossible to miss, and it runs on exactly the concepts and dataset you work through in [Neo4j & GenAI Fundamentals](https://graphacademy.neo4j.com/courses/genai-fundamentals).
 
-![](/assets/img/2026/07/rag-vs-graphrag-two-retrievers-one-question-1.png)
+![rag vs graphrag demo](/assets/img/2026/07/rag-vs-graphrag-two-retrievers-one-question-1.png)
 
 ## What RAG and GraphRAG actually do
 
@@ -17,17 +17,17 @@ Retrieval-augmented generation (RAG) gives a large language model the context it
 
 The most common form is vector RAG. You embed your text as vectors, store them, and at query time find the chunks that are semantically closest to the question. It is good at “find me something that reads like this”.
 
-![](/assets/img/2026/07/rag-vs-graphrag-two-retrievers-one-question-2.png)
+![rag architecture](/assets/img/2026/07/rag-vs-graphrag-two-retrievers-one-question-2.png)
 
 GraphRAG adds the missing dimension: relationships. A vector search can tell you a film’s plot is similar to your query, but it cannot tell you the film’s genre, its cast, or its average rating unless that text happens to sit in the same chunk. A graph can. GraphRAG takes the results of a vector search and traverses the graph to pull in connected facts, so the model answers with structure, not just similarity.
 
-![](/assets/img/2026/07/rag-vs-graphrag-two-retrievers-one-question-3.png)
+![graphrag architecture](/assets/img/2026/07/rag-vs-graphrag-two-retrievers-one-question-3.png)
 
 ## The recommendations dataset
 
 The demo runs on Neo4j’s public dataset, the same one used throughout the course. It models movies, people connected to them, and a lot of ratings.
 
-![](/assets/img/2026/07/rag-vs-graphrag-two-retrievers-one-question-4.png)
+![movies graph data model](/assets/img/2026/07/rag-vs-graphrag-two-retrievers-one-question-4.png)
 
 A `Movie` is `IN_GENRE` of one or more genres, a `Person` `ACTED_IN` or `DIRECTED` it, and a `USER` `RATED` it. Each movie also carries a plot summary, which is embedded as a 1536-dimension vector and stored in a vector index called `moviePlots`.
 
