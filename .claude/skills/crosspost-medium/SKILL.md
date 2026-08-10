@@ -82,19 +82,42 @@ consider a display name, not a chore.
 Gists in particular should become a fenced code block — there are no JS embeds on
 this site, and a gist can rot like any other remote content.
 
-**Reword the link cards.** Medium's link cards become a blockquote link. They
-read like platform furniture. Rewrite as a sentence or delete.
+**Deal with the link cards.** Medium's link cards become a blockquote link. They
+read like platform furniture. Delete them, or leave them and say so — do not
+rewrite one into a sentence of your own.
 
-## 3. Read it as prose
+## 3. Read it as prose — but do not write any
 
-The conversion is faithful, which means it faithfully carries over things that
-belong on Medium and not here: clap and follow prompts, newsletter CTAs,
-"originally published" lines Medium added itself, and course plugs. Cut what does
-not read like this blog.
+**The words are Martin's. Never reword, rewrite, expand, condense, or add a
+sentence.** Not to improve an excerpt, not to fix an awkward line, not to smooth
+a transition. If a sentence reads badly, that is his to fix, and a draft that
+comes back in his own voice is worth more than a better-written one that doesn't.
+Say what you noticed in the report and leave the text alone.
 
-Check the **first paragraph** especially. Jekyll uses it as the home-page excerpt
-and the meta description, so it has to say something on its own. This is why the
-credit line goes at the *end* — at the top it would become the description.
+What you *may* remove — whole blocks of Medium's platform furniture, deleted
+outright, never reworded:
+
+- clap, follow and subscribe prompts
+- newsletter and membership CTAs
+- "originally published" lines Medium added itself (the script writes the
+  credit line at the end; a second one is Medium's)
+- boilerplate publication footers, the "What Is …?" section that ends every
+  post in a publication
+- `?ref=medium` and other tracking params on links that survive
+
+And what the conversion itself broke — damage, not wording — fix silently and
+list it in the report:
+
+- missing spaces where an inline-code span met the next word
+  (`` `execute`method ``, `` `GraphDatabase.driver`class ``)
+- mangled punctuation and entities the conversion left behind
+
+The test is whether the fix changes what Martin wrote or restores it. Closing up
+`` `execute`method `` restores it. Anything that alters a sentence he actually
+typed does not, however small the improvement — including a first paragraph too
+thin to carry the home-page excerpt and meta description. That one is still worth
+checking, and it is why the credit line goes at the *end*: at the top it would
+become the description. **Report it and leave it.**
 
 ## 4. Verify
 
@@ -118,8 +141,12 @@ page looks like.
 ## 5. Stop
 
 **Leave the draft uncommitted.** Martin edits the wording before it goes in — the
-drafting is useful, the final wording is his. Report what changed, that it is
-uncommitted, and wait.
+drafting is useful, the wording is his, first draft to last. Report what changed,
+that it is uncommitted, and wait.
+
+The report is where everything you noticed but did not touch goes: the awkward
+line, the thin opening paragraph. List them as observations, not as edits you
+made.
 
 Publishing, when he says so, is a plain move — the draft is already dated, so
 there is no rename to get wrong:
