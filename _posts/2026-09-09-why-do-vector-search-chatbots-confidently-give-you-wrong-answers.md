@@ -8,4 +8,6 @@ At [WeAreDevelopers](https://www.wearedevelopers.com/) I was given 10 minutes to
 
 > Why do plain vector search chatbots confidently give you wrong answers, like recommending an obscure film called Gordy when you asked about a talking pig movie (the answer was Babe)?
 
+💅
+
 {% include youtube.html id="-MVNW940398" title="Why Do Vector Search Chatbots Confidently Give You Wrong Answers?" %}
