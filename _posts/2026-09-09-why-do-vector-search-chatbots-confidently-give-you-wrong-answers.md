@@ -11,3 +11,5 @@ At [WeAreDevelopers](https://www.wearedevelopers.com/) I was given 10 minutes to
 💅
 
 {% include youtube.html id="-MVNW940398" title="Why Do Vector Search Chatbots Confidently Give You Wrong Answers?" %}
+
+The Gordy vs. Babe demo in the talk is the same one I wrote up in [RAG vs GraphRAG — Two Retrievers, One Question](/posts/rag-vs-graphrag-two-retrievers-one-question/), if you want to dig into how it works.
