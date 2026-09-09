@@ -29,6 +29,10 @@ bundle exec jekyll serve --livereload --drafts
 
 Drafts go in `_drafts/`. Push to `main` and Actions deploys.
 
+## Git
+
+- Commit as the user only. Never add a `Co-Authored-By: Claude` trailer or otherwise credit Claude in commit messages.
+
 ## Don't
 
 - Redesign anything. If something looks wrong, say so rather than changing it.
