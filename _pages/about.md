@@ -5,7 +5,7 @@ redirect_from:
   - /p/about.html
 ---
 
-\<Stuff about="code" /> is Martin O'Hanlon's project blog. I write about the things I make with code and hardware, in the hope that others will enjoy them (either through ridicule or admiration).
+\<Stuff about="code" /> is [Martin O'Hanlon's](https://ohanlonweb.com) project blog. I write about the things I make with code and hardware, in the hope that others will enjoy them (either through ridicule or admiration).
 
 The posts here go back to 2012. Early posts are about Python, Raspberry Pi and Minecraft, with detours into the micro:bit, GPIO, cameras, robots and whatever else had my attention at the time.
 
